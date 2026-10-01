@@ -1,4 +1,0 @@
-Options -Indexes
-<FilesMatch "^(README\.md|PROJECT_STATUS\.md|PLAN_ANALYSIS\.md|\.env.*|\.gitignore)$">
-    Require all denied
-</FilesMatch>

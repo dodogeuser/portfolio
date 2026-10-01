@@ -1,5 +1,26 @@
 # Project status
 
+## Static portfolio migration — October 2026
+
+The user requested HTML, Tailwind CSS, and JavaScript for GitHub Pages. This supersedes the PHP/WAMP checkpoints and next-phase instructions recorded below; those entries are historical.
+
+- Replaced all five PHP entry points and Apache configuration with a static homepage, three generated case-study pages, and HTML section aliases.
+- Added compiled Tailwind CSS 4, a responsive dark visual system, local SVG artwork/favicon, semantic sections, and reduced-motion behavior.
+- Added JavaScript navigation, project filtering, clipboard support, an optional text-only terminal, and validated email-draft preparation. The website sends no mail and stores no visitor input.
+- Preserved documented training, social/contact details, project statuses, conceptual architecture labels, and the removal of case-study Screenshots, What I Learned, and GitHub Repository sections.
+- Used Georges as the display name per the latest user request. Existing email and social URLs retain their supplied spelling.
+- The legacy includes/assets/project directories were absent. Detailed skills were not recoverable; current focus areas use only documented project themes.
+- Added a pinned npm toolchain, public-only `dist/` output, repository-prefix preview server, Playwright tests, and a GitHub Actions deployment workflow.
+- Updated README.md and AGENTS.md for the static architecture. Historical requirements below do not require restoring PHP or stopping at old phase checkpoints.
+
+Validation: Tailwind production build, JavaScript syntax check, and Git whitespace check passed. All seven Playwright tests passed in both installed Chrome (6.2 seconds) and the downloaded Playwright Chromium (10.8 seconds): repository-prefixed links/assets, filtering, contact validation and encoded drafts, terminal markup safety/history, mobile menu behavior, reduced motion and overflow at 360/390/768/1024/1440/1920px, and no-JavaScript content/navigation. Desktop homepage, mobile homepage, and case-study screenshots were reviewed. Test artifacts are in ignored `test-results/`. Sandboxed test-server teardown stalled after successful checks; the final test run completed with exit code 0 using the running preview server. Local tests used `PLAYWRIGHT_CHANNEL=chrome`; CI installs Playwright Chromium.
+
+Deployment: no push or live publication has been performed. Enable GitHub Actions in the repository's Pages settings and push to `main` to deploy. Old `.php` bookmarks cannot be executed or redirected by GitHub Pages; use the new HTML/section URLs.
+
+Content limitations: certificate dates and verification URLs, detailed project source verification, and the original skills data remain unavailable. Contact continues to rely on the visitor's email app, with direct email/copy fallback.
+
+## Historical PHP implementation record
+
 ## Current checkpoint
 
 Phase 10 - CONTACT: implemented and server-tested using an honest mailto fallback. Direct server mail is not configured. Stopping at the guide's major-phase checkpoint. Next: Phase 11 - Animation system.

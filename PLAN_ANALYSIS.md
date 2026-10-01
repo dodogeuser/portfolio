@@ -1,5 +1,9 @@
 # Portfolio plan analysis
 
+## Current architecture override — October 2026
+
+The user requested conversion to static HTML, Tailwind CSS, and JavaScript for GitHub Pages. This supersedes the historical PHP/WAMP architecture, no-Node build constraint, server-side contact processing, and old implementation checkpoints below. The current implementation uses compiled Tailwind CSS, static project pages, and client-side email drafts. See README.md and PROJECT_STATUS.md for current development and deployment instructions. Preserve the content-integrity rules and explicit case-study section removals below.
+
 Source: George_Youkhanna_Cybersecurity_Portfolio_Codex_Plan.pdf, all eight pages, supplied by the user. Its implementation requirements are used within the user's request to build the portfolio. The document does not independently authorize publishing, contacting others or modifying unrelated projects.
 
 ## Product and architecture

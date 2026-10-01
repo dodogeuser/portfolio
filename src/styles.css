@@ -1,0 +1,63 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../scripts/build.mjs";
+@source "../assets/js/main.js";
+
+@theme {
+    --color-ink: #080d13;
+    --color-panel: #0e161f;
+    --color-line: #23303c;
+    --color-muted: #9aaab8;
+    --color-accent: #70e0cd;
+    --color-paper: #eaf0f4;
+    --font-sans: "Segoe UI", Arial, sans-serif;
+    --font-mono: Consolas, "Liberation Mono", monospace;
+}
+
+@layer base {
+    html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+    body { @apply bg-ink text-paper antialiased; }
+    ::selection { @apply bg-accent text-ink; }
+    :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 5px; }
+    button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    [hidden] { display: none !important; }
+    p { text-wrap: pretty; }
+}
+
+@layer components {
+    .shell { @apply mx-auto w-full max-w-7xl px-6 sm:px-10 lg:px-14; }
+    .section { @apply border-t border-line py-20 md:py-28; }
+    .eyebrow { @apply font-mono text-xs uppercase tracking-[0.16em] text-accent; }
+    .section-title { @apply mt-4 text-4xl font-semibold tracking-tight sm:text-5xl; }
+    .body-copy { @apply text-base leading-8 text-muted; }
+    .button { @apply inline-flex min-h-12 items-center justify-center gap-8 border border-accent bg-accent px-6 py-3 text-sm font-semibold text-ink transition-colors hover:bg-paper hover:border-paper; }
+    .button-outline { @apply border-line bg-transparent text-paper hover:border-accent hover:bg-transparent hover:text-accent; }
+    .tag { @apply inline-block border border-line px-3 py-1 font-mono text-[11px] text-muted; }
+    .nav-link { @apply py-3 text-sm text-muted transition-colors hover:text-paper; }
+    .nav-link[aria-current] { @apply text-accent; }
+    .project-card { @apply flex h-full flex-col border border-line bg-panel transition-colors hover:border-accent/50; }
+    .project-art { @apply relative flex h-52 items-center justify-center overflow-hidden border-b border-line; }
+    .field { @apply mt-2 block w-full rounded-none border border-line bg-ink p-3 text-base text-paper placeholder:text-muted/70 focus:border-accent focus:outline-none; }
+    .filter { @apply min-h-11 border border-line px-4 py-2 font-mono text-xs text-muted transition-colors hover:text-paper; }
+    .filter[aria-pressed="true"] { @apply border-accent bg-accent/10 text-accent; }
+    .detail-copy h2 { @apply mb-5 text-3xl font-semibold tracking-tight; }
+    .detail-copy p, .detail-copy li { @apply text-muted leading-8; }
+    .detail-copy ul { @apply list-disc space-y-3 pl-5; }
+}
+
+.hero-grid { background-image: linear-gradient(#70e0cd06 1px, transparent 1px), linear-gradient(90deg, #70e0cd06 1px, transparent 1px); background-size: 64px 64px; }
+.hero-name { font-size: clamp(3.1rem, 7vw, 6.6rem); line-height: .98; letter-spacing: -.065em; }
+.hero-visual { background: radial-gradient(ellipse at center, #18393655, transparent 68%); }
+.orbit { transform-origin: 250px 250px; animation: orbit 90s linear infinite; }
+.signal-dot { box-shadow: 0 0 0 4px #70e0cd12; }
+.diagram-grid { background-image: linear-gradient(#23303c66 1px, transparent 1px), linear-gradient(90deg, #23303c66 1px, transparent 1px); background-size: 24px 24px; }
+.project-card:hover .project-art svg { transform: translateY(-4px); }
+.project-art svg { transition: transform 300ms ease; }
+.reveal-in { animation: reveal 600ms ease both; }
+@keyframes orbit { to { transform: rotate(360deg); } }
+@keyframes reveal { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}
