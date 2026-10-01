@@ -1,53 +1,37 @@
 # Georges Youkhanna — Portfolio
 
-A static portfolio built with semantic HTML, compiled Tailwind CSS 4, and vanilla JavaScript. No PHP, database, runtime framework, or browser CDN is required. Node.js is used only for building and local development.
+Plain HTML, Tailwind CSS via CDN, custom CSS, and vanilla JavaScript. No npm installation, build command, PHP server, or custom GitHub Actions workflow is needed.
 
-## Local development
+## Preview and edit
 
-Requires Node.js 22+.
+Open `index.html` in your browser, or use your editor's static Live Server. An internet connection is needed to load Tailwind from the CDN. Edit the HTML, CSS, or JavaScript and refresh the page.
 
-```sh
-npm ci
-npm run dev
-```
+- `index.html`: homepage.
+- `projects/*.html`: three directly editable project pages.
+- `assets/css/style.css`: ordinary CSS for shared components and artwork.
+- Each main page's `style type="text/tailwindcss"` block: shared Tailwind theme colors and fonts. Keep these four blocks consistent.
+- `assets/js/main.js`: menu, filters, terminal, clipboard, and email drafts.
+- `assets/icons/favicon.svg`: favicon.
+- `about.html`, `projects.html`, `certifications.html`, `contact.html`: section redirects.
+- `.nojekyll`: tells GitHub Pages to serve these files directly.
 
-Open `http://127.0.0.1:4173/portfolio/`. Re-run `npm run build` after source edits, then refresh. `npm run preview` serves an existing build. The local server supports both `/` and `/portfolio/` to check repository-relative URLs.
+Tailwind loads through the [official browser CDN approach](https://tailwindcss.com/docs/installation/play-cdn). The CDN URL contains `/npm/` because that is jsDelivr's package URL; it does not require npm on your computer or GitHub.
 
-```sh
-npx playwright install chromium
-npm test
-```
+## Publish on GitHub Pages
 
-Tests cover project links/assets, mobile navigation, filters, contact drafts, terminal text safety/history, no-JavaScript content, reduced motion, and overflow at 360–1920px.
+1. Commit and push this repository's files, including `.nojekyll` and the new `projects/` pages. Include deletion of the old `.github/workflows/pages.yml` workflow and npm/build files.
+2. Open **Settings → Pages → Build and deployment**.
+3. Choose **Deploy from a branch**, then **main** and **/(root)**. Click **Save**.
+4. Wait for GitHub's built-in Pages deployment to finish, then refresh the website. Use Ctrl+F5 if the old version is cached.
 
-## Project structure
+There is no `dist/` folder to upload and no custom build workflow to run. Publish the repository root. Relative links support both `/portfolio/` and `/Georges-Portfolio/` without edits. The test deployment address is `https://samer-nasr.github.io/Georges-Portfolio/`.
 
-- `index.html`: homepage content and accessible markup.
-- `src/styles.css`: Tailwind theme, reusable components, and motion preferences.
-- `src/projects.mjs`: documented project content for three case studies.
-- `assets/js/main.js`: menu, section tracking, project filters, clipboard, contact drafts, and optional terminal.
-- `assets/icons/favicon.svg`: local vector identity.
-- `scripts/build.mjs`: generates project pages and section aliases; copies only public assets into `dist/`.
-- `scripts/serve.mjs`: local preview server, not a production service.
-- `tests/`: Playwright browser tests.
-- `.github/workflows/pages.yml`: build, test, and GitHub Pages deployment.
+## Verification
 
-Edit source files, not generated `dist/`. Dependencies are pinned in `package-lock.json`.
-
-## GitHub Pages deployment
-
-1. Commit and push the changes to `main`.
-2. In the repository, open **Settings → Pages → Build and deployment** and choose **GitHub Actions** as the source.
-3. Run **Build and deploy portfolio** from the Actions tab if needed. Subsequent pushes to `main` build, test, and publish automatically; pull requests only build and test.
-
-The expected address for the current remote is `https://dodogeuser.github.io/portfolio/`. This is the intended deployment address, not confirmation that the site is live. The workflow uploads only `dist/`, keeping source, tests, and internal documentation out of the published site. All asset and project links are relative, so repository subpaths work without a router or rewrite rules.
-
-Setup follows the [GitHub Pages custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [Tailwind CLI documentation](https://tailwindcss.com/docs/installation/tailwind-cli).
+Check the homepage and all three project pages at mobile and desktop widths. Verify the menu, filters, terminal commands, contact validation, and email-draft link. Inspect the browser console for failed CDN or asset requests. There is no package-based test runner.
 
 ## Content and contact
 
-Contact creates a URL-encoded `mailto:` draft only. Visitors review and send using their own email app; the website sends no email and stores no form data. Direct email and phone links work without JavaScript. Long drafts may be limited by the visitor's mail client; copying the message into webmail is the fallback.
+The form prepares a `mailto:` draft; visitors review and send it in their own email app. The website sends no email and stores no form data. Direct email and phone links remain available without JavaScript, although Tailwind styling requires JavaScript and CDN access.
 
-Project descriptions come from the existing planning documents. TRACEZERO remains in development through Phase 06; the trading project remains research/simulation. No performance claims, credential dates, unsupported skills, or project repository links have been invented. The missing legacy skills data has not been reconstructed. Use `src/projects.mjs` to update details once verified.
-
-Old `.php` URLs cannot redirect on GitHub Pages. New `about.html`, `projects.html`, `certifications.html`, and `contact.html` aliases lead to homepage sections. Update any external PHP bookmarks.
+Project descriptions retain the documented scope. TRACEZERO remains in development through Phase 06, and the trading project remains research/simulation. No unsupported skills, credential dates, performance claims, or project repository links have been added. Old `.php` URLs are no longer supported.

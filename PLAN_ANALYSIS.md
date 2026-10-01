@@ -1,5 +1,10 @@
 # Portfolio plan analysis
 
+## Latest override — CDN-only deployment
+
+The user explicitly requires HTML, Tailwind via CDN, and JavaScript with no npm or build workflow. This supersedes the compiled Tailwind/Node approach below. Use the root HTML files and `projects/*.html`, the shared plain CSS, and `.nojekyll`. GitHub Pages publishes `main` from `/(root)` using Deploy from a branch. README.md and AGENTS.md describe the current setup.
+
+
 ## Current architecture override — October 2026
 
 The user requested conversion to static HTML, Tailwind CSS, and JavaScript for GitHub Pages. This supersedes the historical PHP/WAMP architecture, no-Node build constraint, server-side contact processing, and old implementation checkpoints below. The current implementation uses compiled Tailwind CSS, static project pages, and client-side email drafts. See README.md and PROJECT_STATUS.md for current development and deployment instructions. Preserve the content-integrity rules and explicit case-study section removals below.

@@ -1,5 +1,20 @@
 # Project status
 
+## Current setup — Tailwind CDN, no build step
+
+The user's latest request replaces the npm-based setup with ordinary HTML, Tailwind CSS loaded from jsDelivr, plain custom CSS, and vanilla JavaScript.
+
+- Homepage and all three case studies load the pinned Tailwind browser CDN (4.3.3).
+- Case studies and section aliases are committed HTML files, not generated at deployment.
+- Shared component CSS is browser-readable and contains no build-only directives.
+- Removed package manifests/lockfile, build and preview scripts, npm-based tests/configuration, and the custom Pages workflow.
+- Added root `.nojekyll`. Publish **main / (root)** using **Deploy from a branch**. No npm commands or custom workflow are required.
+- Browser verification passed: CDN utilities/custom colors, desktop and 390px layouts without overflow, all three project pages, project filters, mobile menu, terminal commands, and encoded email drafts. No browser errors were logged on the checked pages. No message was sent.
+- Changes are local; the account's public test site has not been updated by this task.
+
+The entries below describe superseded architectures and historical checks.
+
+
 ## Static portfolio migration — October 2026
 
 The user requested HTML, Tailwind CSS, and JavaScript for GitHub Pages. This supersedes the PHP/WAMP checkpoints and next-phase instructions recorded below; those entries are historical.
