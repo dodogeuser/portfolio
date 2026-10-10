@@ -1,0 +1,58 @@
+/* Native same-origin document navigation: no intercepted links or history changes.
+   Unsupported browsers keep ordinary navigation. Reveals use optional WAAPI. */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition,
+::view-transition-group(root),
+::view-transition-image-pair(root),
+::view-transition-old(root),
+::view-transition-new(root) {
+  pointer-events: none;
+}
+
+::view-transition {
+  background: var(--bg);
+}
+
+::view-transition-group(root) {
+  background: var(--surface);
+  animation-duration: 160ms;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 160ms;
+  animation-timing-function: ease-out;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  animation-name: portfolio-departure;
+}
+
+::view-transition-new(root) {
+  animation-name: portfolio-arrival;
+}
+
+@keyframes portfolio-departure {
+  to { opacity: 0; }
+}
+
+@keyframes portfolio-arrival {
+  from { opacity: 0.76; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce), (forced-colors: active), print {
+  @view-transition {
+    navigation: none;
+  }
+
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}

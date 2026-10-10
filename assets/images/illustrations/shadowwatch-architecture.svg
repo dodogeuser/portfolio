@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="shadowwatch-map-title shadowwatch-map-desc">
+  <title id="shadowwatch-map-title">ShadowWatch responsibility map</title>
+  <desc id="shadowwatch-map-desc">Original documentation describes implementation, but project code and runtime were not audited here. The technical reference records missing API/helpers and schema/query inconsistencies. Connections explain responsibilities, not verified runtime interfaces.</desc>
+  <path d="M20 24H940V576H20Z M20 55H940" fill="none" stroke="#55418A" stroke-width="1" opacity=".4"/>
+  <text x="40" y="47" fill="#E6C18A" font-family="monospace" font-size="15">DOCUMENTED TRAINING SIMULATOR</text>
+  <path class="architecture-edge" data-architecture-edge="interface application" d="M170 127H480" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="application database" d="M480 127H790" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="application triage" d="M480 127V209.5H170V292" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="triage intelligence" d="M170 292H480" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="triage progression" d="M170 292H790" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="intelligence database" d="M480 292V209.5H790V127" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="security application" d="M170 457V292H480V127" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="security triage" d="M170 457V374.5H170V292" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <g class="architecture-node" data-architecture-node="interface" data-component-status="documented">
+    <rect x="40" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Analyst interface</text>
+    <text x="56" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">HTML &amp; vanilla JS</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="application" data-component-status="documented">
+    <rect x="350" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">PHP application</text>
+    <text x="366" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Pages &amp; JSON actions</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="database" data-component-status="documented">
+    <rect x="660" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Training data</text>
+    <text x="676" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">MySQL via PDO</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="triage" data-component-status="documented">
+    <rect x="40" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Triage &amp; incidents</text>
+    <text x="56" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Simulated response</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="intelligence" data-component-status="documented">
+    <rect x="350" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Logs &amp; intelligence</text>
+    <text x="366" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Classification &amp; IOCs</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="progression" data-component-status="documented">
+    <rect x="660" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Training progression</text>
+    <text x="676" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Points &amp; badges</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="security" data-component-status="documented">
+    <rect x="40" y="415" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="447" fill="#F0EBFF" font-family="monospace" font-size="16">Access &amp; administration</text>
+    <text x="56" y="476" fill="#B6AEC9" font-family="monospace" font-size="14">Session &amp; role checks</text>
+  </g>
+  <text x="40" y="562" fill="#B6AEC9" font-family="monospace" font-size="14">Explanatory relationships / not verified runtime interfaces</text>
+</svg>

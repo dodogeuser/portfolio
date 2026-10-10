@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 435" role="img" aria-labelledby="tracezero-map-title tracezero-map-desc">
+  <title id="tracezero-map-title">TRACEZERO responsibility map</title>
+  <desc id="tracezero-map-desc">The original status document reports phases 01–06 implemented. Source code and project tests were not executed for this portfolio. Unified timeline and later tools are not implemented. Connections explain responsibilities, not verified runtime interfaces.</desc>
+  <path d="M20 24H940V411H20Z M20 55H940" fill="none" stroke="#55418A" stroke-width="1" opacity=".4"/>
+  <text x="40" y="47" fill="#CBD2E3" font-family="monospace" font-size="15">DOCUMENTED PHASES 01–06</text>
+  <path class="architecture-edge" data-architecture-edge="accounts cases" d="M170 127H480" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="cases originals" d="M480 127H790" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="cases generator" d="M480 127V209.5H170V292" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="generator originals" d="M170 292V209.5H790V127" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="originals explorer" d="M790 127V209.5H480V292" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="cases persistence" d="M480 127V209.5H790V292" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="originals persistence" d="M790 127V209.5H790V292" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="explorer persistence" d="M480 292H790" fill="none" stroke="#CBD2E3" stroke-width="1.2"/>
+  <g class="architecture-node" data-architecture-node="accounts" data-component-status="documented">
+    <rect x="40" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Accounts &amp; scope</text>
+    <text x="56" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Roles &amp; membership</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="cases" data-component-status="documented">
+    <rect x="350" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Case management</text>
+    <text x="366" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Lifecycle &amp; conflicts</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="originals" data-component-status="documented">
+    <rect x="660" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Evidence originals</text>
+    <text x="676" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Private text storage</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="generator" data-component-status="documented">
+    <rect x="40" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Synthetic generator</text>
+    <text x="56" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Seed &amp; pinned version</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="explorer" data-component-status="documented">
+    <rect x="350" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Evidence explorer</text>
+    <text x="366" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Normalized records</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="persistence" data-component-status="documented">
+    <rect x="660" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Persistence &amp; custody</text>
+    <text x="676" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">MySQL &amp; private storage</text>
+  </g>
+  <text x="40" y="397" fill="#B6AEC9" font-family="monospace" font-size="14">Explanatory relationships / not verified runtime interfaces</text>
+</svg>

@@ -1,21 +1,201 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080d13"><meta name="description" content="An environment for practicing security operations, from the first alert to a structured incident response."><title>ShadowWatch | Georges Youkhanna</title><link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-ink: #080d13;
-            --color-panel: #0e161f;
-            --color-line: #23303c;
-            --color-muted: #9aaab8;
-            --color-accent: #70e0cd;
-            --color-paper: #eaf0f4;
-            --font-sans: "Segoe UI", Arial, sans-serif;
-            --font-mono: Consolas, "Liberation Mono", monospace;
-        }
-    </style>
-    <link rel="stylesheet" href="../assets/css/style.css"></head>
-<body><a href="#main-content" class="sr-only focus:not-sr-only focus:bg-accent focus:p-4 focus:text-ink">Skip to content</a>
-<header class="border-b border-line"><div class="shell flex min-h-20 items-center justify-between gap-4"><a class="font-mono text-2xl font-bold" href="../index.html" aria-label="Georges Youkhanna home">GY<span class="text-accent">.</span></a><a class="nav-link" href="../index.html#projects">← All projects</a></div></header>
-<main id="main-content"><section class="hero-grid"><div class="shell py-20 md:py-28"><p class="eyebrow">Project 01 / Security operations</p><h1 class="mt-6 max-w-4xl text-5xl font-semibold tracking-tight sm:text-7xl">ShadowWatch</h1><p class="mt-7 max-w-2xl text-xl leading-9 text-muted">An environment for practicing security operations, from the first alert to a structured incident response.</p><p class="mt-8 inline-block border border-accent/30 bg-accent/5 px-4 py-2 font-mono text-xs text-accent">Operational training simulator</p></div></section>
-<div class="shell grid gap-12 border-t border-line py-16 md:grid-cols-[.5fr_1.5fr] md:gap-20"><aside><p class="eyebrow">Inside the project</p><nav class="mt-6 flex flex-col gap-4 text-sm text-muted" aria-label="Project sections"><a class="hover:text-accent" href="#overview">01 / Overview</a><a class="hover:text-accent" href="#scope">02 / Scope</a><a class="hover:text-accent" href="#architecture">03 / Conceptual workflow</a><a class="hover:text-accent" href="#security">04 / Security considerations</a></nav></aside>
-<div class="detail-copy min-w-0 space-y-14"><section id="overview"><h2>Overview</h2><p>ShadowWatch is a SOC training simulator bringing alert triage, incident management, IOC extraction, and threat intelligence into a learning workflow. Its focus is helping analysts practice investigation and response in a training setting.</p></section><section id="scope"><h2>Project scope</h2><ul><li>Alert triage and investigation workflows.</li><li>Incident management organized around PICERL: preparation, identification, containment, eradication, recovery, and lessons learned.</li><li>Indicators of compromise and threat intelligence context.</li><li>Gamification to support security training.</li></ul></section><section id="architecture"><h2>Conceptual workflow</h2><p>Presented as an operational training simulator, rather than a production SOC deployment. The diagram below is conceptual and does not assert a verified implementation architecture.</p><ol class="mt-7 grid gap-3 sm:grid-cols-3"><li class="!list-none border border-line bg-panel p-5"><span class="block font-mono text-xs text-accent">01</span><span class="mt-3 block text-sm text-paper">Training alerts</span></li><li class="!list-none border border-line bg-panel p-5"><span class="block font-mono text-xs text-accent">02</span><span class="mt-3 block text-sm text-paper">Triage &amp; investigate</span></li><li class="!list-none border border-line bg-panel p-5"><span class="block font-mono text-xs text-accent">03</span><span class="mt-3 block text-sm text-paper">Incident response</span></li></ol></section><section id="security"><h2>Security considerations</h2><p>The supplied project description includes role-based access control, CSRF protection, bcrypt password hashing, and PDO database access. These are documented project features; a source-code review is still pending.</p></section><a class="button button-outline" href="../index.html#contact">Talk about this project ↗</a></div></div>
-<section class="section bg-panel"><div class="shell flex flex-wrap items-center justify-between gap-6"><div><p class="eyebrow">Continue exploring</p><h2 class="mt-4 text-3xl font-semibold">TRACEZERO</h2></div><a href="tracezero.html" class="button">Next project <span aria-hidden="true">↗</span></a></div></section></main><footer class="shell flex flex-wrap justify-between gap-4 py-7 text-xs text-muted"><span>Georges Youkhanna · Cybersecurity &amp; development</span><a href="../index.html">Back to portfolio ↑</a></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09080D">
+  <meta name="description" content="ShadowWatch — SOC Training Simulator. Documented training simulator. Source-qualified engineering case study.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'">
+  <title>ShadowWatch | George Youkhanna</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/polish.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <link rel="stylesheet" href="../assets/css/case-projects.css">
+  <script type="module" src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/project-explorer.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="George Youkhanna">
+  <meta property="og:title" content="ShadowWatch | George Youkhanna">
+  <meta property="og:description" content="ShadowWatch — SOC Training Simulator. Documented training simulator. Source-qualified engineering case study.">
+  <meta property="og:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="George Youkhanna ? Engineered to be secure.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ShadowWatch | George Youkhanna">
+  <meta name="twitter:description" content="ShadowWatch — SOC Training Simulator. Documented training simulator. Source-qualified engineering case study.">
+  <meta name="twitter:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+<link rel="canonical" href="https://dodogeuser.github.io/portfolio/projects/shadowwatch.html">
+<meta property="og:url" content="https://dodogeuser.github.io/portfolio/projects/shadowwatch.html">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar container">
+      <div class="header-identity"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><p class="header-role">Software engineering<br>&amp; security</p></div>
+      <div class="header-actions"><a class="text-link desktop-link" href="../resume/index.html">Resume <span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" data-menu-open hidden aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog">Menu <span class="menu-icon" aria-hidden="true"></span></button></div>
+    </div>
+    <nav class="fallback-nav container" aria-label="Main navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../projects/index.html" aria-current="location">Projects</a></li><li><a href="../services/index.html">Services</a></li><li><a href="../about/index.html">About</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../resume/index.html">Resume</a></li></ul></nav>
+  </header>
+  <dialog class="site-menu" id="site-menu" aria-labelledby="menu-title">
+    <div class="container">
+      <div class="menu-header"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><button class="menu-close" type="button" data-menu-close autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <h2 class="sr-only" id="menu-title">Site navigation</h2>
+      <div class="menu-layout">
+        <nav class="menu-primary" aria-label="Main"><ul><li><a href="../index.html"><span class="nav-number" aria-hidden="true">01</span>Home</a></li><li><a href="../projects/index.html" aria-current="location"><span class="nav-number" aria-hidden="true">02</span>Projects</a></li><li><a href="../services/index.html"><span class="nav-number" aria-hidden="true">03</span>Services</a></li><li><a href="../about/index.html"><span class="nav-number" aria-hidden="true">04</span>About</a></li><li><a href="../contact/index.html"><span class="nav-number" aria-hidden="true">05</span>Contact</a></li></ul></nav>
+        <div class="menu-secondary"><nav aria-label="More"><p class="footer-label">More to explore</p><ul><li><a href="../resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles in menu"><p class="footer-label">Elsewhere</p><ul><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li></ul></nav></div>
+      </div>
+      <div class="menu-bottom"><p>George Youkhanna — Security-Focused Software Engineer</p></div>
+    </div>
+  </dialog>
+  <main class="case-main case-shadowwatch container" id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="./index.html">Projects</a></li><li><span aria-current="page">ShadowWatch</span></li></ol></nav>
+    <header class="case-hero"><div><p class="eyebrow">Engineering case study / SOC Training Simulator</p><h1>ShadowWatch</h1><p class="lede">Practice the analyst workflow. Keep the environment simulated.</p><p class="status-line"><span class="badge">Documented training simulator</span><span class="badge">Runtime validation pending</span></p>
+      <ul class="case-tech" aria-label="Documented technologies; runtime unverified"><li>PHP 8.x</li><li>MySQL</li><li>HTML / CSS</li><li>Vanilla JavaScript</li><li>PDO</li></ul>
+      <p class="case-source">Original documentation describes implementation, but project code and runtime were not audited here. The technical reference records missing API/helpers and schema/query inconsistencies.</p><a class="text-link" href="#architecture">Explore the architecture <span aria-hidden="true">↓</span></a></div>
+      <figure class="case-hero-art"><img src="../assets/images/illustrations/shadowwatch-flow.svg" width="640" height="420" decoding="async" alt="ShadowWatch original illustrative technical artwork."><figcaption class="case-caption">SOC Training Simulator / Original illustrative artwork</figcaption></figure>
+    </header>
+    <div class="case-layout"><nav class="case-nav" data-case-navigation aria-label="Case study sections"><p class="eyebrow">Inside the system</p><ol><li><a href="#purpose"><span aria-hidden="true">01</span>Purpose</a></li><li><a href="#workflow"><span aria-hidden="true">02</span>Workflow</a></li><li><a href="#architecture"><span aria-hidden="true">03</span>Architecture</a></li><li><a href="#capabilities"><span aria-hidden="true">04</span>Capabilities</a></li><li><a href="#security"><span aria-hidden="true">05</span>Security</a></li><li><a href="#validation"><span aria-hidden="true">06</span>Validation</a></li><li><a href="#related"><span aria-hidden="true">07</span>Related work</a></li></ol></nav><div class="case-content">
+        <section class="case-section" id="purpose" aria-labelledby="purpose-title">
+          <p class="eyebrow">01 / purpose</p>
+          <h2 id="purpose-title">A practice environment for analyst decisions.</h2>
+          <p class="case-prose">ShadowWatch provides a gamified environment for practicing alert triage, incident tickets, log classification and indicator investigation. It brings these exercises into one analyst workspace rather than presenting a real operational SOC.</p><p class="case-prose">Intended users are analysts learning security operations and administrators preparing training sessions. All alerts, threats, incidents and response actions are simulated; no real systems are monitored or affected.</p>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="workflow" aria-labelledby="workflow-title">
+          <p class="eyebrow">02 / workflow</p>
+          <h2 id="workflow-title">Follow the source-defined workflow.</h2>
+          <ol class="case-workflow"><li><strong>Prepare a session</strong><p>Administrators generate simulated alerts and training logs.</p></li><li><strong>Triage alerts</strong><p>Review severity and context, then acknowledge an alert.</p></li><li><strong>Choose a simulated response</strong><p>Resolve the training alert with a response action; it does not isolate a real host.</p></li><li><strong>Manage incidents</strong><p>Create tickets for complex simulated threats and track investigation status.</p></li><li><strong>Inspect logs and indicators</strong><p>Classify simulated logs and look up IP, domain or hash indicators in the training intelligence database.</p></li><li><strong>Review progression</strong><p>Points, badges and leaderboard activity provide practice feedback, not evidence of professional detection accuracy.</p></li></ol>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="architecture" aria-labelledby="architecture-title" data-architecture-explorer data-component-ids="interface application database triage intelligence progression security">
+          <p class="eyebrow">03 / architecture</p>
+          <h2 id="architecture-title" data-explorer-heading tabindex="-1">Explore the responsibilities.</h2>
+          <p class="case-prose">Original documentation describes implementation, but project code and runtime were not audited here. The technical reference records missing API/helpers and schema/query inconsistencies. This map groups responsibilities, not verified endpoints, schemas or runtime call order.</p>
+          <figure class="case-diagram"><div class="architecture-viewport" tabindex="0" role="region" aria-label="Architecture diagram; scroll horizontally on narrow screens">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="architecture-title" aria-describedby="shadowwatch-map-desc">
+  <desc id="shadowwatch-map-desc">Original documentation describes implementation, but project code and runtime were not audited here. The technical reference records missing API/helpers and schema/query inconsistencies. Connections explain responsibilities, not verified runtime interfaces.</desc>
+  <path d="M20 24H940V576H20Z M20 55H940" fill="none" stroke="#55418A" stroke-width="1" opacity=".4"/>
+  <text x="40" y="47" fill="#E6C18A" font-family="monospace" font-size="15">DOCUMENTED TRAINING SIMULATOR</text>
+  <path class="architecture-edge" data-architecture-edge="interface application" d="M170 127H480" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="application database" d="M480 127H790" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="application triage" d="M480 127V209.5H170V292" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="triage intelligence" d="M170 292H480" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="triage progression" d="M170 292H790" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="intelligence database" d="M480 292V209.5H790V127" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="security application" d="M170 457V292H480V127" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="security triage" d="M170 457V374.5H170V292" fill="none" stroke="#E6C18A" stroke-width="1.2"/>
+  <g class="architecture-node" data-architecture-node="interface" data-component-status="documented">
+    <rect x="40" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Analyst interface</text>
+    <text x="56" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">HTML &amp; vanilla JS</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="application" data-component-status="documented">
+    <rect x="350" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">PHP application</text>
+    <text x="366" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Pages &amp; JSON actions</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="database" data-component-status="documented">
+    <rect x="660" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Training data</text>
+    <text x="676" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">MySQL via PDO</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="triage" data-component-status="documented">
+    <rect x="40" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Triage &amp; incidents</text>
+    <text x="56" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Simulated response</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="intelligence" data-component-status="documented">
+    <rect x="350" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Logs &amp; intelligence</text>
+    <text x="366" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Classification &amp; IOCs</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="progression" data-component-status="documented">
+    <rect x="660" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Training progression</text>
+    <text x="676" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Points &amp; badges</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="security" data-component-status="documented">
+    <rect x="40" y="415" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="447" fill="#F0EBFF" font-family="monospace" font-size="16">Access &amp; administration</text>
+    <text x="56" y="476" fill="#B6AEC9" font-family="monospace" font-size="14">Session &amp; role checks</text>
+  </g>
+  <text x="40" y="562" fill="#B6AEC9" font-family="monospace" font-size="14">Explanatory relationships / not verified runtime interfaces</text>
+</svg>
+
+          </div><figcaption>Training responsibilities only. No real systems are monitored or affected. Connections explain relationships, not runtime calls. Every component has a static explanation below.</figcaption></figure>
+          <div class="explorer-controls" data-explorer-controls hidden role="group" aria-label="Select architecture component">
+            <p>Select a component to read its responsibilities. The selected node has a thick outline; connected nodes have dashed outlines. Show all restores every explanation.</p>
+            <div class="explorer-buttons"><button type="button" data-explorer-reset aria-pressed="true" aria-controls="component-details">Show all components</button><button type="button" data-component-select="interface" aria-pressed="false" aria-controls="component-interface">Analyst interface</button><button type="button" data-component-select="application" aria-pressed="false" aria-controls="component-application">PHP application</button><button type="button" data-component-select="database" aria-pressed="false" aria-controls="component-database">Training data</button><button type="button" data-component-select="triage" aria-pressed="false" aria-controls="component-triage">Triage &amp; incidents</button><button type="button" data-component-select="intelligence" aria-pressed="false" aria-controls="component-intelligence">Logs &amp; intelligence</button><button type="button" data-component-select="progression" aria-pressed="false" aria-controls="component-progression">Training progression</button><button type="button" data-component-select="security" aria-pressed="false" aria-controls="component-security">Access &amp; administration</button></div>
+            <p class="explorer-status" data-explorer-status role="status" aria-live="polite" aria-atomic="true">All 7 components shown.</p>
+          </div>
+          <div class="component-details" id="component-details">
+            <article class="component-panel" id="component-interface" data-component-panel="interface" aria-labelledby="component-interface-title">
+              <h3 id="component-interface-title">Analyst interface</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>Server-rendered HTML and small JavaScript interactions present dashboards, alerts, incidents and logs.</p><dl><dt>Inputs / context</dt><dd>Authenticated analyst actions and training-session context.</dd><dt>Relationships / data flow</dt><dd>PHP pages render state; interactive actions are described as calls to JSON API endpoints.</dd><dt>Boundary / limitation</dt><dd>The technical reference does not include app.js or the API implementations.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-application" data-component-panel="application" aria-labelledby="component-application-title">
+              <h3 id="component-application-title">PHP application</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>The documented application uses procedural PHP with shared session, authentication and helper includes.</p><dl><dt>Inputs / context</dt><dd>Page requests and small asynchronous actions.</dd><dt>Relationships / data flow</dt><dd>Pages query through a PDO wrapper and render the training workspace.</dd><dt>Boundary / limitation</dt><dd>Some database convenience helpers are not supplied in the technical reference.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-database" data-component-panel="database" aria-labelledby="component-database-title">
+              <h3 id="component-database-title">Training data</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>MySQL holds accounts, scenarios, simulated alerts, incidents, logs and intelligence records.</p><dl><dt>Inputs / context</dt><dd>Training records and analyst workflow updates.</dd><dt>Relationships / data flow</dt><dd>Parameterized PDO access relates application pages to stored training state.</dd><dt>Boundary / limitation</dt><dd>The technical notes identify schema/query naming mismatches; exact deployed schema consistency is unverified.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-triage" data-component-panel="triage" aria-labelledby="component-triage-title">
+              <h3 id="component-triage-title">Triage &amp; incidents</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>The README describes acknowledging/resolving alerts, creating tickets and role-gated incident assignment.</p><dl><dt>Inputs / context</dt><dd>Simulated alerts and analyst review.</dd><dt>Relationships / data flow</dt><dd>Alert handling and tickets organize the exercise; actions can contribute progression points.</dd><dt>Boundary / limitation</dt><dd>PICERL-inspired workflow is documented, but exact incident statuses differ between references.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-intelligence" data-component-panel="intelligence" aria-labelledby="component-intelligence-title">
+              <h3 id="component-intelligence-title">Logs &amp; intelligence</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>Simulated log classification and indicator extraction support IP, domain and hash lookups.</p><dl><dt>Inputs / context</dt><dd>Training logs and their extracted indicators.</dd><dt>Relationships / data flow</dt><dd>The training intelligence database provides context for alert and incident review.</dd><dt>Boundary / limitation</dt><dd>An indicator lookup is not a live production threat feed or a proven detection result.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-progression" data-component-panel="progression" aria-labelledby="component-progression-title">
+              <h3 id="component-progression-title">Training progression</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>Points, ranks, badges, analyst profiles and leaderboards provide documented practice feedback.</p><dl><dt>Inputs / context</dt><dd>Training actions and recorded score events.</dd><dt>Relationships / data flow</dt><dd>Progression summarizes analyst participation in the simulated workspace.</dd><dt>Boundary / limitation</dt><dd>The reference flags hard-coded accuracy output; no measured skill or detection metric is claimed.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+            <article class="component-panel" id="component-security" data-component-panel="security" aria-labelledby="component-security-title">
+              <h3 id="component-security-title">Access &amp; administration</h3><p class="case-source">Documented implementation / runtime unverified</p>
+              <p>Documentation describes session authentication, role-gated administration and training-session management.</p><dl><dt>Inputs / context</dt><dd>Account sessions, roles and state-changing requests.</dd><dt>Relationships / data flow</dt><dd>Access checks and CSRF handling accompany application workflows.</dd><dt>Boundary / limitation</dt><dd>Documented controls do not resolve the development-only exposure risks or prove all API checks.</dd></dl><p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+            </article>
+          </div>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="capabilities" aria-labelledby="capabilities-title">
+          <p class="eyebrow">04 / capabilities</p>
+          <h2 id="capabilities-title">Scope and implementation boundaries.</h2>
+          <div class="case-capabilities"><article><h3>Alert console</h3><p>Severity-oriented simulated alert queue, acknowledgement and simulated response choices.</p></article><article><h3>Incident workflow</h3><p>Training tickets, investigation statuses and role-gated assignment; references differ on precise lifecycle labels.</p></article><article><h3>Log and IOC exercises</h3><p>Simulated log classification, indicator extraction and training intelligence lookups.</p></article><article><h3>Administration and progression</h3><p>Scenario/session management, roles, points, badges and leaderboard feedback. No effectiveness metric is published.</p></article></div>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="security" aria-labelledby="security-title">
+          <p class="eyebrow">05 / security</p>
+          <h2 id="security-title">Controls with explicit evidence levels.</h2>
+          <p class="case-prose">These descriptions retain the source’s evidence level. Documented controls and design intentions are not an independent security audit.</p><dl class="case-security"><div><dt>Authentication / documented</dt><dd>Password hashing with PHP password_hash/password_verify; the README names bcrypt and describes login session regeneration and HTTPOnly cookies.</dd></div><div><dt>Request and query controls / documented</dt><dd>CSRF tokens, parameterized PDO queries and output escaping are described. API-layer coverage was not independently reviewed.</dd></div><div><dt>Roles / documented</dt><dd>Analyst, Senior Analyst and Admin access appear in the README. The technical reference lists additional role/schema variation; no definitive deployed matrix is asserted.</dd></div><div><dt>Local training boundary</dt><dd>The reference flags development-only utilities, demo-account configuration and verbose development errors as deployment risks. Remediation is not claimed complete.</dd></div></dl>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="validation" aria-labelledby="validation-title">
+          <p class="eyebrow">06 / validation</p>
+          <h2 id="validation-title">What the sources establish.</h2>
+          <p class="case-prose">Original documentation describes implementation, but project code and runtime were not audited here. The technical reference records missing API/helpers and schema/query inconsistencies.</p><ul class="case-limitations"><li>The technical reference reports schema/query mismatches and missing API/frontend/helper material; the documentation does not prove a consistent running release.</li><li>Incident status labels and role definitions differ between sources, so this explanation avoids a definitive state/permission matrix.</li><li>Leaderboard accuracy includes hard-coded values in the reference. Training feedback is not a validated performance result.</li><li>Development-only utility exposure and deployment configuration require review before any nonlocal use; no project security audit was performed.</li></ul><p class="case-source">Portfolio tests validate this website, not underlying project outcomes.</p>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+        <section class="case-section" id="related" aria-labelledby="related-title">
+          <p class="eyebrow">07 / related</p>
+          <h2 id="related-title">Explore adjacent disciplines.</h2>
+          <ul class="case-related"><li><a href="./spectre.html"><strong>SPECTRE <span aria-hidden="true">↗</span></strong><span>Explore the related engineering case study</span></a></li><li><a href="./tracezero.html"><strong>TRACEZERO <span aria-hidden="true">↗</span></strong><span>Explore the related engineering case study</span></a></li></ul><a class="text-link" href="./index.html">Return to all projects <span aria-hidden="true">↗</span></a>
+          <p class="case-source">README / pp. 1–2, 5–6; Technical Documentation / §§1–5</p>
+        </section>
+    </div></div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a></div><nav aria-label="Footer navigation"><p class="footer-label">Explore</p><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../projects/index.html" aria-current="location">Projects</a></li><li><a href="../services/index.html">Services</a></li><li><a href="../about/index.html">About</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles"><p class="footer-label">Elsewhere</p><ul class="footer-links"><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub<span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn<span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart<span class="sr-only"> external site</span></a></li></ul></nav></div><div class="footer-bottom"><p>© 2026 George Youkhanna</p><p>Software engineering &amp; security</p></div></div></footer>
+</body>
+</html>

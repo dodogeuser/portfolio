@@ -1,37 +1,27 @@
-# Georges Youkhanna — Portfolio
+# George Youkhanna - Portfolio
 
-Plain HTML, Tailwind CSS via CDN, custom CSS, and vanilla JavaScript. No npm installation, build command, PHP server, or custom GitHub Actions workflow is needed.
+Security-Focused Software Engineer and Co-Founder of NexusQart. Carbon & Violet static portfolio using semantic HTML, ordinary CSS, vanilla JavaScript and local pinned Three.js 0.180.0.
 
-## Preview and edit
+Live site: https://dodogeuser.github.io/portfolio/
 
-Open `index.html` in your browser, or use your editor's static Live Server. An internet connection is needed to load Tailwind from the CDN. Edit the HTML, CSS, or JavaScript and refresh the page.
+## Hosting
 
-- `index.html`: homepage.
-- `projects/*.html`: three directly editable project pages.
-- `assets/css/style.css`: ordinary CSS for shared components and artwork.
-- Each main page's `style type="text/tailwindcss"` block: shared Tailwind theme colors and fonts. Keep these four blocks consistent.
-- `assets/js/main.js`: menu, filters, terminal, clipboard, and email drafts.
-- `assets/icons/favicon.svg`: favicon.
-- `about.html`, `projects.html`, `certifications.html`, `contact.html`: section redirects.
-- `.nojekyll`: tells GitHub Pages to serve these files directly.
+GitHub Pages publishes main / root using Deploy from a branch. .nojekyll enables direct static serving. No backend, database, npm, package installation, build command or CDN is needed. Do not add a contact form or tracking.
 
-Tailwind loads through the [official browser CDN approach](https://tailwindcss.com/docs/installation/play-cdn). The CDN URL contains `/npm/` because that is jsDelivr's package URL; it does not require npm on your computer or GitHub.
+## Editing
 
-## Publish on GitHub Pages
+Pages: index.html, projects/index.html, five projects/*.html case studies, services/index.html, about/index.html, resume/index.html, contact/index.html and 404.html. Root-level about/projects/certifications/contact HTML files are compatibility redirects. Historical unused assets/docs are preserved; active pages link only the approved new assets.
 
-1. Commit and push this repository's files, including `.nojekyll` and the new `projects/` pages. Include deletion of the old `.github/workflows/pages.yml` workflow and npm/build files.
-2. Open **Settings → Pages → Build and deployment**.
-3. Choose **Deploy from a branch**, then **main** and **/(root)**. Click **Save**.
-4. Wait for GitHub's built-in Pages deployment to finish, then refresh the website. Use Ctrl+F5 if the old version is cached.
+Shared CSS and JavaScript live under assets; keep duplicated navigation synchronized. Data/projects.js retains null future project-link fields. Notes and challenge-story sections were removed at owner request. Individual project repository/documentation links are not enabled. Current approved CV lives at assets/docs/George-Youkhanna-CV.pdf; original supplied SPECTRE/REVENANT logos are in assets/images/projects/. Do not publish private planning docs or source references.
 
-There is no `dist/` folder to upload and no custom build workflow to run. Publish the repository root. Relative links support both `/portfolio/` and `/Georges-Portfolio/` without edits. The test deployment address is `https://samer-nasr.github.io/Georges-Portfolio/`.
+## Updates
+
+Edit the private source workspace first, run its regression checks, then export public files with tools/prepare_release.py using https://dodogeuser.github.io/portfolio/. Copy the reviewed export into a clean checkout and push a normal commit; no force push. A fresh directory is required for export. Preserve compatibility redirects and repository history. Keep canonical/social/sitemap URLs aligned with the production base.
+
+To update the CV, supply an owner-approved current PDF and update the existing asset. Add certifications only from confirmed facts/links. Add real project logos only. Keep conceptual/planned components explicitly scoped. Do not invent achievements, features, metrics or notes. Future project links require owner-approved exact URLs, metadata validation and intentional rendering; never substitute the profile URL.
 
 ## Verification
 
-Check the homepage and all three project pages at mobile and desktop widths. Verify the menu, filters, terminal commands, contact validation, and email-draft link. Inspect the browser console for failed CDN or asset requests. There is no package-based test runner.
+Source and executable adapter suites and local HTTP checks passed before release. Real browser/AT/GPU/print/performance acceptance remains unrecorded; automated source checks are not a WCAG or Lighthouse score. Recheck desktop/mobile, menu focus/Escape, filtering, services, skills, architecture explorers, no-JS, reduced motion, Core fallbacks/visibility pause and browser console on the live site.
 
-## Content and contact
-
-The form prepares a `mailto:` draft; visitors review and send it in their own email app. The website sends no email and stores no form data. Direct email and phone links remain available without JavaScript, although Tailwind styling requires JavaScript and CDN access.
-
-Project descriptions retain the documented scope. TRACEZERO remains in development through Phase 06, and the trading project remains research/simulation. No unsupported skills, credential dates, performance claims, or project repository links have been added. Old `.php` URLs are no longer supported.
+Original repository history and retained historical documents remain available. PROJECT_STATUS.md records this release.

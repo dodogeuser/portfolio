@@ -1,0 +1,15 @@
+@import url('./motion.css');
+@import url('./core.css');
+
+/* Preserve foundation interaction feedback; optional Phase 03 styles above. */
+a, button {
+  transition: color var(--motion-fast) ease, background-color var(--motion-fast) ease,
+              border-color var(--motion-fast) ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="spectre-art-title spectre-art-desc">
+  <title id="spectre-art-title">SPECTRE — evidence and relationships</title>
+  <desc id="spectre-art-desc">An illustrative entity and evidence graph within concentric discovery rings. Fine cyan and violet lines connect abstract case-linked nodes and evidence records. This conveys SPECTRE's reported investigation scope, not a verified system topology or application screenshot.</desc>
+  <defs>
+    <linearGradient id="spectre-line" x1="135" y1="90" x2="491" y2="327" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A28AF5"/><stop offset=".55" stop-color="#B6AEC9"/><stop offset="1" stop-color="#8AD3DD"/>
+    </linearGradient>
+    <radialGradient id="spectre-halo">
+      <stop stop-color="#8AD3DD" stop-opacity=".07"/><stop offset="1" stop-color="#8AD3DD" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="335" cy="211" r="197" fill="url(#spectre-halo)"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1" opacity=".15">
+    <path d="M28 88H612M28 332H612M116 32V388M524 32V388"/>
+    <path d="M335 30V390M108 211H568" stroke-dasharray="2 10"/>
+    <circle cx="335" cy="211" r="174" stroke-dasharray="1 12"/>
+  </g>
+  <g fill="none" stroke="url(#spectre-line)" stroke-width="1">
+    <circle cx="335" cy="211" r="145" opacity=".27"/>
+    <circle cx="335" cy="211" r="97" opacity=".4"/>
+    <circle cx="335" cy="211" r="48" opacity=".35"/>
+    <path d="M207 142L291 126L335 211L423 168L459 271L363 304L335 211L243 262L207 142M291 126L423 168M243 262L363 304M291 126L243 262" opacity=".75"/>
+    <path d="M207 142L145 106H89M459 271L510 309H560M423 168L505 118H554M243 262L172 302H105" opacity=".42"/>
+    <path d="M207 142L363 304M291 126L459 271" opacity=".17" stroke-dasharray="3 7"/>
+    <path d="M335 66A145 145 0 0 1 465 147M190 211A145 145 0 0 0 253 331" stroke="#8AD3DD" stroke-width="1.7" opacity=".65"/>
+  </g>
+  <g fill="#09080D" stroke="url(#spectre-line)" stroke-width="1.25">
+    <path d="M335 191L352 201V221L335 231L318 221V201Z"/>
+    <circle cx="207" cy="142" r="10"/><circle cx="291" cy="126" r="7"/>
+    <circle cx="423" cy="168" r="10"/><circle cx="459" cy="271" r="8"/>
+    <circle cx="363" cy="304" r="10"/><circle cx="243" cy="262" r="7"/>
+    <rect x="71" y="88" width="40" height="46" rx="3"/>
+    <rect x="542" y="100" width="40" height="46" rx="3"/>
+    <rect x="542" y="286" width="40" height="46" rx="3"/>
+    <rect x="71" y="279" width="40" height="46" rx="3"/>
+  </g>
+  <g fill="none" stroke="#B6AEC9" stroke-width="1" opacity=".6">
+    <path d="M80 102H102M80 109H96M80 116H100M551 114H573M551 121H567M551 128H571M551 300H573M551 307H568M551 314H571M80 293H102M80 300H96M80 307H100"/>
+    <path d="M195 65H216M205 55V76M470 349H491M480 339V360" opacity=".4"/>
+  </g>
+  <g fill="#8AD3DD">
+    <circle cx="335" cy="211" r="3"/><circle cx="207" cy="142" r="2"/>
+    <circle cx="459" cy="271" r="2"/><circle cx="363" cy="304" r="2"/>
+  </g>
+  <g fill="#B6AEC9" font-family="monospace" font-size="10" letter-spacing="1.5">
+    <text x="32" y="37">ENTITY / EVIDENCE</text>
+    <text x="32" y="388">ILLUSTRATIVE RELATIONSHIPS</text>
+  </g>
+</svg>

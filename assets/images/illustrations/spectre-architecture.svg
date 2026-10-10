@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="spectre-map-title spectre-map-desc">
+  <title id="spectre-map-title">SPECTRE documented component responsibilities</title>
+  <desc id="spectre-map-desc">The browser interface relates to FastAPI case services and MySQL persistence through SQLAlchemy and Alembic. Collectors supply provenance-bearing evidence, which supports graph, timeline, findings and reports. Dashed relationships identify authorization and audit boundaries. This map is a documentation-derived explanation, not a verified runtime call sequence.</desc>
+  <g fill="none" stroke="#55418A" stroke-width="1" opacity=".25"><path d="M20 24H940M20 536H940M20 24V536M940 24V536"/><path d="M20 195H940M20 380H940" stroke-dasharray="2 9"/></g>
+  <g fill="none" stroke="#786695" stroke-width="1.2">
+    <path class="architecture-edge" data-architecture-edge="ui api" d="M270 103H365"/>
+    <path class="architecture-edge" data-architecture-edge="api persistence" d="M595 103H690"/>
+    <path class="architecture-edge" data-architecture-edge="api collectors" d="M455 146V195H155V245"/>
+    <path class="architecture-edge" data-architecture-edge="api evidence" d="M480 146V245"/>
+    <path class="architecture-edge" data-architecture-edge="collectors evidence" d="M270 288H365"/>
+    <path class="architecture-edge" data-architecture-edge="evidence analysis" d="M595 288H690"/>
+    <path class="architecture-edge" data-architecture-edge="evidence reporting" d="M480 331V473H690"/>
+    <path class="architecture-edge" data-architecture-edge="analysis reporting" d="M805 331V430"/>
+    <path class="architecture-edge" data-architecture-edge="security api" d="M270 473H325V103H365" stroke-dasharray="5 5"/>
+    <path class="architecture-edge" data-architecture-edge="security collectors" d="M155 430V331" stroke-dasharray="5 5"/>
+    <path class="architecture-edge" data-architecture-edge="security evidence" d="M270 458H345V288H365" stroke-dasharray="5 5"/>
+  </g>
+  <g font-family="monospace" fill="#F0EBFF">
+    <g class="architecture-node" data-architecture-node="ui"><rect x="40" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="94" font-size="18">01 / User interface</text><text x="58" y="123" font-size="14" fill="#B6AEC9">HTML · CSS · JavaScript</text></g>
+    <g class="architecture-node" data-architecture-node="api"><rect x="365" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="383" y="94" font-size="18">02 / Application</text><text x="383" y="123" font-size="14" fill="#B6AEC9">Python · FastAPI</text></g>
+    <g class="architecture-node" data-architecture-node="persistence"><rect x="690" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="94" font-size="18">03 / Persistence</text><text x="708" y="123" font-size="14" fill="#B6AEC9">MySQL · ORM · migrations</text></g>
+    <g class="architecture-node" data-architecture-node="collectors"><rect x="40" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="279" font-size="18">04 / Collectors</text><text x="58" y="308" font-size="14" fill="#B6AEC9">Passive public sources</text></g>
+    <g class="architecture-node" data-architecture-node="evidence"><rect x="365" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="383" y="279" font-size="18">05 / Evidence</text><text x="383" y="308" font-size="14" fill="#B6AEC9">Provenance · hash · case</text></g>
+    <g class="architecture-node" data-architecture-node="analysis"><rect x="690" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="279" font-size="18">06 / Analysis</text><text x="708" y="308" font-size="14" fill="#B6AEC9">Graph · timeline · findings</text></g>
+    <g class="architecture-node" data-architecture-node="security"><rect x="40" y="430" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="464" font-size="18">08 / Security</text><text x="58" y="493" font-size="14" fill="#B6AEC9">Roles · grants · audit</text></g>
+    <g class="architecture-node" data-architecture-node="reporting"><rect x="690" y="430" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="464" font-size="18">07 / Reporting</text><text x="708" y="493" font-size="14" fill="#B6AEC9">HTML · PDF · traceability</text></g>
+  </g>
+</svg>

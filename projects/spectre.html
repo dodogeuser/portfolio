@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09080D">
+  <meta name="description" content="SPECTRE engineering case study: documented local-first OSINT architecture, evidence workflows, FastAPI/MySQL layers and controlled authorization boundaries.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'">
+  <title>SPECTRE Engineering Case Study | George Youkhanna</title>
+  <link rel="icon" href="../assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/layout.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/animations.css">
+  <link rel="stylesheet" href="../assets/css/pages.css">
+  <link rel="stylesheet" href="../assets/css/polish.css">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <script type="module" src="../assets/js/main.js"></script>
+  <script type="module" src="../assets/js/project-explorer.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="George Youkhanna">
+  <meta property="og:title" content="SPECTRE Engineering Case Study | George Youkhanna">
+  <meta property="og:description" content="SPECTRE engineering case study: documented local-first OSINT architecture, evidence workflows, FastAPI/MySQL layers and controlled authorization boundaries.">
+  <meta property="og:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="George Youkhanna ? Engineered to be secure.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SPECTRE Engineering Case Study | George Youkhanna">
+  <meta name="twitter:description" content="SPECTRE engineering case study: documented local-first OSINT architecture, evidence workflows, FastAPI/MySQL layers and controlled authorization boundaries.">
+  <meta name="twitter:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+<link rel="canonical" href="https://dodogeuser.github.io/portfolio/projects/spectre.html">
+<meta property="og:url" content="https://dodogeuser.github.io/portfolio/projects/spectre.html">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar container">
+      <div class="header-identity"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><p class="header-role">Software engineering<br>&amp; security</p></div>
+      <div class="header-actions"><a class="text-link desktop-link" href="../resume/index.html">Resume <span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" data-menu-open hidden aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog">Menu <span class="menu-icon" aria-hidden="true"></span></button></div>
+    </div>
+    <nav class="fallback-nav container" aria-label="Main navigation"><ul><li><a href="../index.html">Home</a></li><li><a href="../projects/index.html" aria-current="location">Projects</a></li><li><a href="../services/index.html">Services</a></li><li><a href="../about/index.html">About</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../resume/index.html">Resume</a></li></ul></nav>
+  </header>
+  <dialog class="site-menu" id="site-menu" aria-labelledby="menu-title">
+    <div class="container">
+      <div class="menu-header"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><button class="menu-close" type="button" data-menu-close autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <h2 class="sr-only" id="menu-title">Site navigation</h2>
+      <div class="menu-layout">
+        <nav class="menu-primary" aria-label="Main"><ul><li><a href="../index.html"><span class="nav-number" aria-hidden="true">01</span>Home</a></li><li><a href="../projects/index.html" aria-current="location"><span class="nav-number" aria-hidden="true">02</span>Projects</a></li><li><a href="../services/index.html"><span class="nav-number" aria-hidden="true">03</span>Services</a></li><li><a href="../about/index.html"><span class="nav-number" aria-hidden="true">04</span>About</a></li><li><a href="../contact/index.html"><span class="nav-number" aria-hidden="true">05</span>Contact</a></li></ul></nav>
+        <div class="menu-secondary"><nav aria-label="More"><p class="footer-label">More to explore</p><ul><li><a href="../resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles in menu"><p class="footer-label">Elsewhere</p><ul><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li></ul></nav></div>
+      </div>
+      <div class="menu-bottom"><p>George Youkhanna — Security-Focused Software Engineer</p></div>
+    </div>
+  </dialog>
+  <main class="case-main container" id="main-content" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><ol><li><a href="../index.html">Home</a></li><li><a href="./index.html">Projects</a></li><li><span aria-current="page">SPECTRE</span></li></ol></nav>
+    <header class="case-hero">
+      <div>
+        <p class="eyebrow">Engineering case study / Windows edition</p>
+        <img class="project-identity-logo" src="../assets/images/projects/spectre-logo.png" width="1289" height="1221" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      <h1>SPECTRE</h1>
+        <p class="lede">Local-first OSINT &amp; security investigation. From collected observations to explainable, evidence-backed findings.</p>
+        <p class="status-line"><span class="badge">Documented v1.0</span><span class="badge">Release validation pending</span></p>
+        <ul class="case-tech" aria-label="Technology stack documented in the Windows Guide"><li>Python</li><li>FastAPI</li><li>MySQL</li><li>SQLAlchemy</li><li>Alembic</li><li>HTML / CSS</li><li>JavaScript</li><li>Cytoscape.js</li></ul>
+        <p class="case-source">Stack and capabilities checked against the v1.0 Windows Guide. Source code and project runtime were not reviewed.</p>
+        <a class="text-link" href="#architecture">Explore the architecture <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="case-hero-art"><img src="../assets/images/illustrations/spectre-network.svg" width="640" height="420" decoding="async" alt="Original technical illustration of evidence-linked investigation relationships."><figcaption class="case-caption">Evidence-linked investigation / Original illustrative artwork</figcaption></figure>
+    </header>
+
+    <div class="case-layout">
+      <nav class="case-nav" data-case-navigation aria-label="Case study sections">
+        <p class="eyebrow">Inside the system</p>
+        <ol>
+          <li><a href="#purpose"><span aria-hidden="true">01</span>Purpose</a></li>
+          <li><a href="#workflow"><span aria-hidden="true">02</span>Workflow</a></li>
+          <li><a href="#architecture"><span aria-hidden="true">03</span>Architecture</a></li>
+          <li><a href="#capabilities"><span aria-hidden="true">04</span>Capabilities</a></li>
+          <li><a href="#security"><span aria-hidden="true">05</span>Security</a></li>
+          <li><a href="#validation"><span aria-hidden="true">06</span>Validation</a></li>
+          <li><a href="#related"><span aria-hidden="true">07</span>Related work</a></li>
+        </ol>
+      </nav>
+      <div class="case-content">
+        <section class="case-section" id="purpose" aria-labelledby="purpose-title">
+          <p class="eyebrow">01 / The investigation problem</p>
+          <h2 id="purpose-title">Keep the evidence.<br>Make the reasoning visible.</h2>
+          <p class="case-prose">The documented workflow addresses a central investigation need: organizing collected observations, their origins and the reasoning that connects them. SPECTRE brings case context, public intelligence, evidence, correlations and reports into a local-first environment.</p>
+          <p class="case-prose">The application and MySQL database run on the analyst’s Windows workstation. Local-first does not mean network-free: public-source collection and authorized verification can require network access.</p>
+          <div class="case-principles">
+            <article><h3>Evidence first</h3><p>Retain source, collection time, collector metadata, hashes and case context rather than detaching conclusions from observations.</p></article>
+            <article><h3>Explainable analysis</h3><p>Keep correlations and findings tied to supporting evidence. Analysis remains distinct from what was actually collected.</p></article>
+            <article><h3>Scope discipline</h3><p>Keep investigations case-scoped. A discovered hostname or address does not inherit active-assessment permission.</p></article>
+          </div>
+          <p class="case-prose">Intended users include analysts conducting lawful cybersecurity investigations, defensive analysis, education and explicitly authorized security validation.</p>
+          <p class="case-source">Windows Guide / pp. 2, 5–7, 9</p>
+        </section>
+
+        <section class="case-section" id="workflow" aria-labelledby="workflow-title">
+          <p class="eyebrow">02 / Intended investigation workflow</p>
+          <h2 id="workflow-title">A case-led path from scope to report.</h2>
+          <ol class="case-workflow">
+            <li><strong>Create a case</strong><p>Define the investigation and its purpose.</p></li>
+            <li><strong>Add a scoped target</strong><p>Record the target and confirm investigation boundaries.</p></li>
+            <li><strong>Collect passively</strong><p>Run permitted public-source collectors and review observations.</p></li>
+            <li><strong>Inspect the evidence</strong><p>Examine provenance, timestamps, hashes and collector metadata.</p></li>
+            <li><strong>Correlate observations</strong><p>Use the graph, timeline and deterministic findings to explore relationships.</p></li>
+            <li><strong>Review the reasoning</strong><p>Inspect supporting evidence before accepting or escalating a finding.</p></li>
+            <li><strong>Verify only if authorized</strong><p>Require installation enablement and a separate exact-target grant.</p></li>
+            <li><strong>Export the case</strong><p>Create an HTML/PDF report that retains evidence traceability.</p></li>
+          </ol>
+          <p class="case-source">Windows Guide / p. 6</p>
+        </section>
+
+        <section class="case-section" id="architecture" aria-labelledby="architecture-title" data-architecture-explorer>
+          <p class="eyebrow">03 / System architecture</p>
+          <h2 id="architecture-title" data-explorer-heading tabindex="-1">Explore the responsibilities.</h2>
+          <p class="case-prose">The documented stack separates the browser interface, Python/FastAPI application and MySQL persistence using SQLAlchemy and Alembic. Collectors and evidence-backed investigation capabilities form the working context around those layers.</p>
+          <figure class="case-diagram">
+            <div class="architecture-viewport" tabindex="0" role="region" aria-label="Architecture diagram; scroll horizontally on narrow screens">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="architecture-title" aria-describedby="spectre-map-desc">
+                <desc id="spectre-map-desc">The browser interface relates to FastAPI case services and MySQL persistence through SQLAlchemy and Alembic. Collectors supply provenance-bearing evidence, which supports graph, timeline, findings and reports. Dashed relationships identify authorization and audit boundaries. This map is a documentation-derived explanation, not a verified runtime call sequence.</desc>
+                <g fill="none" stroke="#55418A" stroke-width="1" opacity=".25"><path d="M20 24H940M20 536H940M20 24V536M940 24V536"/><path d="M20 195H940M20 380H940" stroke-dasharray="2 9"/></g>
+                <g fill="none" stroke="#786695" stroke-width="1.2">
+                  <path class="architecture-edge" data-architecture-edge="ui api" d="M270 103H365"/>
+                  <path class="architecture-edge" data-architecture-edge="api persistence" d="M595 103H690"/>
+                  <path class="architecture-edge" data-architecture-edge="api collectors" d="M455 146V195H155V245"/>
+                  <path class="architecture-edge" data-architecture-edge="api evidence" d="M480 146V245"/>
+                  <path class="architecture-edge" data-architecture-edge="collectors evidence" d="M270 288H365"/>
+                  <path class="architecture-edge" data-architecture-edge="evidence analysis" d="M595 288H690"/>
+                  <path class="architecture-edge" data-architecture-edge="evidence reporting" d="M480 331V473H690"/>
+                  <path class="architecture-edge" data-architecture-edge="analysis reporting" d="M805 331V430"/>
+                  <path class="architecture-edge" data-architecture-edge="security api" d="M270 473H325V103H365" stroke-dasharray="5 5"/>
+                  <path class="architecture-edge" data-architecture-edge="security collectors" d="M155 430V331" stroke-dasharray="5 5"/>
+                  <path class="architecture-edge" data-architecture-edge="security evidence" d="M270 458H345V288H365" stroke-dasharray="5 5"/>
+                </g>
+                <g font-family="monospace" fill="#F0EBFF">
+                  <g class="architecture-node" data-architecture-node="ui"><rect x="40" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="94" font-size="18">01 / User interface</text><text x="58" y="123" font-size="14" fill="#B6AEC9">HTML · CSS · JavaScript</text></g>
+                  <g class="architecture-node" data-architecture-node="api"><rect x="365" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="383" y="94" font-size="18">02 / Application</text><text x="383" y="123" font-size="14" fill="#B6AEC9">Python · FastAPI</text></g>
+                  <g class="architecture-node" data-architecture-node="persistence"><rect x="690" y="60" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="94" font-size="18">03 / Persistence</text><text x="708" y="123" font-size="14" fill="#B6AEC9">MySQL · ORM · migrations</text></g>
+                  <g class="architecture-node" data-architecture-node="collectors"><rect x="40" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="279" font-size="18">04 / Collectors</text><text x="58" y="308" font-size="14" fill="#B6AEC9">Passive public sources</text></g>
+                  <g class="architecture-node" data-architecture-node="evidence"><rect x="365" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="383" y="279" font-size="18">05 / Evidence</text><text x="383" y="308" font-size="14" fill="#B6AEC9">Provenance · hash · case</text></g>
+                  <g class="architecture-node" data-architecture-node="analysis"><rect x="690" y="245" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="279" font-size="18">06 / Analysis</text><text x="708" y="308" font-size="14" fill="#B6AEC9">Graph · timeline · findings</text></g>
+                  <g class="architecture-node" data-architecture-node="security"><rect x="40" y="430" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="58" y="464" font-size="18">08 / Security</text><text x="58" y="493" font-size="14" fill="#B6AEC9">Roles · grants · audit</text></g>
+                  <g class="architecture-node" data-architecture-node="reporting"><rect x="690" y="430" width="230" height="86" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/><text x="708" y="464" font-size="18">07 / Reporting</text><text x="708" y="493" font-size="14" fill="#B6AEC9">HTML · PDF · traceability</text></g>
+                </g>
+              </svg>
+            </div>
+            <figcaption>Documentation-derived component map. Solid lines show responsibility relationships; dashed lines show cross-cutting control relationships. Connections summarize the guide, not verified endpoints, schemas or runtime call order. All components have readable explanations below.</figcaption>
+          </figure>
+          <div class="explorer-controls" data-explorer-controls hidden role="group" aria-label="Select architecture component">
+            <p>Select a component to highlight its relationships and read its responsibilities. Connected nodes use dashed outlines; the selected node uses a thicker outline.</p>
+            <div class="explorer-buttons">
+              <button type="button" data-explorer-reset aria-pressed="true" aria-controls="component-details">Show all components</button>
+              <button type="button" data-component-select="ui" aria-pressed="false" aria-controls="component-ui">User interface</button>
+              <button type="button" data-component-select="api" aria-pressed="false" aria-controls="component-api">Application layer</button>
+              <button type="button" data-component-select="persistence" aria-pressed="false" aria-controls="component-persistence">Persistence</button>
+              <button type="button" data-component-select="collectors" aria-pressed="false" aria-controls="component-collectors">OSINT collectors</button>
+              <button type="button" data-component-select="evidence" aria-pressed="false" aria-controls="component-evidence">Evidence processing</button>
+              <button type="button" data-component-select="analysis" aria-pressed="false" aria-controls="component-analysis">Investigation analysis</button>
+              <button type="button" data-component-select="reporting" aria-pressed="false" aria-controls="component-reporting">Reporting</button>
+              <button type="button" data-component-select="security" aria-pressed="false" aria-controls="component-security">Security boundaries</button>
+            </div>
+            <p class="explorer-status" data-explorer-status role="status" aria-live="polite" aria-atomic="true">All 8 components shown.</p>
+          </div>
+          <div class="component-details" id="component-details">
+              <article class="component-panel" id="component-ui" data-component-panel="ui" aria-labelledby="component-ui-title">
+                <h3 id="component-ui-title">User interface</h3>
+                <p>The documented frontend is HTML, CSS and vanilla JavaScript. It provides the analyst-facing investigation workspace; Cytoscape.js supplies the graph presentation.</p>
+                <dl><dt>Inputs / context</dt><dd>Analyst case, target and investigation interactions.</dd><dt>Relationships / data flow</dt><dd>The application layer supplies case context and observations. Analysis presents graph and timeline views.</dd><dt>Boundary / limitation</dt><dd>Browser presentation is distinct from the local application and database.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–3, 5</p>
+              </article>
+              <article class="component-panel" id="component-api" data-component-panel="api" aria-labelledby="component-api-title">
+                <h3 id="component-api-title">Application layer</h3>
+                <p>Python and FastAPI provide the documented backend. The high-level app/ area contains routes, services, models and application logic.</p>
+                <dl><dt>Inputs / context</dt><dd>Case and target workflows, collector requests and investigation actions.</dd><dt>Relationships / data flow</dt><dd>The interface relates to application services; services coordinate persistence and evidence-backed investigation workflows.</dd><dt>Boundary / limitation</dt><dd>Case membership and role-aware actions are documented controls; exact endpoints were not supplied.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–3, 8</p>
+              </article>
+              <article class="component-panel" id="component-persistence" data-component-panel="persistence" aria-labelledby="component-persistence-title">
+                <h3 id="component-persistence-title">Persistence</h3>
+                <p>MySQL is the documented database, with SQLAlchemy and Alembic migrations. The guide calls for a dedicated database and a least-privilege database user.</p>
+                <dl><dt>Inputs / context</dt><dd>Application models and investigation context.</dd><dt>Relationships / data flow</dt><dd>SQLAlchemy forms the documented persistence layer; Alembic maintains migration history. Exact schemas and transactions have not been reviewed.</dd><dt>Boundary / limitation</dt><dd>Database credentials and the local workstation remain investigation assets requiring protection.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2, 5, 7–8</p>
+              </article>
+              <article class="component-panel" id="component-collectors" data-component-panel="collectors" aria-labelledby="component-collectors-title">
+                <h3 id="component-collectors-title">OSINT collectors</h3>
+                <p>The guide lists DNS, RDAP, Certificate Transparency, IP/ASN context and limited web metadata collection.</p>
+                <dl><dt>Inputs / context</dt><dd>Permitted public-source collection within case context.</dd><dt>Relationships / data flow</dt><dd>Collection produces observations retained with source, timestamps, collector metadata and hashes.</dd><dt>Boundary / limitation</dt><dd>Passive collection is the normal mode. Discovering an asset does not authorize active verification.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–4</p>
+              </article>
+              <article class="component-panel" id="component-evidence" data-component-panel="evidence" aria-labelledby="component-evidence-title">
+                <h3 id="component-evidence-title">Evidence processing</h3>
+                <p>Documented evidence records retain provenance, collection time, collector identity/version and case context. Hashing supports integrity checks.</p>
+                <dl><dt>Inputs / context</dt><dd>Collected observations and separately recorded verification results.</dd><dt>Relationships / data flow</dt><dd>Evidence supports the explorer, chronological timeline, graph correlations, deterministic findings and report traceability.</dd><dt>Boundary / limitation</dt><dd>Historical observations are not silently rewritten. Derived analysis is distinguished from evidence.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–3, 7</p>
+              </article>
+              <article class="component-panel" id="component-analysis" data-component-panel="analysis" aria-labelledby="component-analysis-title">
+                <h3 id="component-analysis-title">Investigation analysis</h3>
+                <p>The documented workspace combines evidence exploration, a timeline, deterministic correlations/findings and an interactive Cytoscape.js graph.</p>
+                <dl><dt>Inputs / context</dt><dd>Case-linked observations and their supporting evidence.</dd><dt>Relationships / data flow</dt><dd>Graph layouts, filtering and node inspection help examine relationships; findings stay connected to observations. Reports preserve that distinction.</dd><dt>Boundary / limitation</dt><dd>AI is described separately as an evidence-grounded, read-only design intention, not autonomous collection.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–3, 6–7</p>
+              </article>
+              <article class="component-panel" id="component-reporting" data-component-panel="reporting" aria-labelledby="component-reporting-title">
+                <h3 id="component-reporting-title">Reporting</h3>
+                <p>The guide documents deterministic HTML and PDF case exports, including evidence traceability and offline-capable branding.</p>
+                <dl><dt>Inputs / context</dt><dd>Case observations, derived findings and verification results.</dd><dt>Relationships / data flow</dt><dd>Exports retain their distinctions so reviewers can follow the supporting evidence. The exact report renderer was not specified.</dd><dt>Boundary / limitation</dt><dd>Exported reports and backups require local protection; no compliance or legal-admissibility guarantee is claimed.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 2–3, 7</p>
+              </article>
+              <article class="component-panel" id="component-security" data-component-panel="security" aria-labelledby="component-security-title">
+                <h3 id="component-security-title">Security boundaries</h3>
+                <p>Documented controls include role-based access, audit trails, exact-target authorization grants, cancellation and case-level active-run safety controls.</p>
+                <dl><dt>Inputs / context</dt><dd>Application roles, case scope and a separately granted exact-target authorization.</dd><dt>Relationships / data flow</dt><dd>Global enablement and exact-target permission are independent gates before controlled verification. Scope restrictions accompany collection and evidence handling.</dd><dt>Boundary / limitation</dt><dd>This is a documented control model, not an independent security audit or proof of bypass resistance.</dd></dl>
+                <p class="case-source">Windows Guide / pp. 3–4, 6–7</p>
+              </article>
+          </div>
+          <p class="case-source">Windows Guide / pp. 2–8. Explanatory grouping; source/runtime validation remains outstanding.</p>
+        </section>
+
+        <section class="case-section" id="capabilities" aria-labelledby="capabilities-title">
+          <p class="eyebrow">04 / Implementation and intentions</p>
+          <h2 id="capabilities-title">Documented capabilities.<br>Explicit evidence boundaries.</h2>
+          <p class="case-prose">The guide identifies the following as part of the completed v1.0 feature set. “Documented” means supported by that supplied guide; it does not mean independently executed or code-audited for this portfolio.</p>
+          <div class="case-capabilities">
+            <article><h3>Case &amp; target management</h3><p>Separate investigations, scoped targets, controlled membership, role-aware sensitive actions and auditability.</p><p class="case-source">Documented v1.0 / pp. 3, 9</p></article>
+            <article><h3>Passive intelligence</h3><p>DNS, RDAP, Certificate Transparency, IP ownership/ASN context and limited web metadata, with evidence provenance.</p><p class="case-source">Documented v1.0 / pp. 3, 9</p></article>
+            <article><h3>Evidence &amp; investigation</h3><p>Evidence explorer, chronological timeline, deterministic correlations/findings and a Cytoscape.js graph. The guide describes Organic, Hierarchical, Radial and Grid layouts, filtering, inspection and browser-local layout persistence.</p><p class="case-source">Documented v1.0 / pp. 2–3, 9</p></article>
+            <article><h3>Traceable reporting</h3><p>Deterministic HTML and PDF exports, offline-capable branding and a clear separation of observations, findings and verification results.</p><p class="case-source">Documented v1.0 / pp. 2–3, 9</p></article>
+          </div>
+          <div class="case-notice"><h3>Design intentions / implementation unverified</h3><p>The AI interface is described as evidence-grounded and read-only. Its output is analysis, not evidence; it is not intended to execute arbitrary commands, launch collectors or bypass authorization. No AI model, provider or implemented integration is established here.</p><p>The Windows launcher’s intended startup behavior includes readiness checks and avoiding duplicate instances without administrator privileges, firewall changes or embedded secrets. The guide documents normal launcher use, but these detailed guarantees have not been independently validated.</p><p class="case-source">Design wording / pp. 5–6, 8</p></div>
+          <p class="case-prose">The source provides no verified roadmap of additional planned modules. None is invented here.</p>
+        </section>
+
+        <section class="case-section" id="security" aria-labelledby="security-title">
+          <p class="eyebrow">05 / Security architecture</p>
+          <h2 id="security-title">Discovery is not authorization.</h2>
+          <p class="case-prose">Passive investigation is the normal mode. Controlled active verification is separately gated and disabled by default in the documented shipped configuration. Enabling the capability does not authorize a target.</p>
+          <figure class="case-diagram"><img src="../assets/images/illustrations/spectre-trust-boundary.svg" width="800" height="320" loading="lazy" decoding="async" alt="Explicit installation enablement and a separate exact-target grant precede bounded non-destructive verification."><figcaption>Two independent prerequisites: global feature enablement and exact-target authorization. Discovered subdomains, IP addresses and third-party infrastructure do not inherit permission.</figcaption></figure>
+          <dl class="case-security">
+            <div><dt>Case scope &amp; role-based access</dt><dd>Scoped targets, controlled membership and RBAC constrain sensitive operations according to application roles. The guide does not define a public role matrix or audited policy coverage.</dd></div>
+            <div><dt>Provenance &amp; integrity</dt><dd>Source, time, collector identity/version, case context and hashes accompany observations. Hashing supports integrity checks; it does not establish legal admissibility or authenticity by itself.</dd></div>
+            <div><dt>History &amp; auditability</dt><dd>Historical observations are retained. Verification adds evidence rather than replacing the original observation; audit trails record security-relevant and investigation actions.</dd></div>
+            <div><dt>Bounded networking &amp; cancellation</dt><dd>The guide lists timeout, response-size, redirect, rate/concurrency limits, cancellation and case-level safety controls. Exact configured values and enforcement tests were not supplied.</dd></div>
+          </dl>
+          <h3>Controlled verification scope</h3>
+          <p class="case-prose">Documented checks include safe HTTP/HTTPS methods such as GET, HEAD and OPTIONS; presented TLS certificate inspection; bounded web-service checks on ports 80 and 443; header validation; specific safe endpoints; and a constrained manual request builder.</p>
+          <p class="case-prose">The Finding-to-Verify workflow distinguishes OBSERVED, VERIFIED, NOT CONFIRMED and FAILED TO VERIFY results. Those labels describe project semantics, not portfolio test outcomes.</p>
+          <div class="case-notice"><h3>Explicitly excluded from v1.0</h3><p>Exploit execution, credential attacks, brute force, unrestricted scanning, destructive requests, denial of service and automated attack chaining are outside the documented feature set. SPECTRE is an investigation platform, not an exploitation framework.</p></div>
+          <p class="case-source">Windows Guide / pp. 2–4, 6–7</p>
+        </section>
+
+        <section class="case-section" id="validation" aria-labelledby="validation-title">
+          <p class="eyebrow">06 / Validation and limitations</p>
+          <h2 id="validation-title">Documentation is evidence.<br>Execution is a separate check.</h2>
+          <p class="case-prose">This case study was checked against the nine-page SPECTRE v1.0 Windows Guide supplied by the owner. Its release-status statement describes a completed feature set and Windows workflow, while requiring distribution validation before declaring a stable public release.</p>
+          <ul class="case-limitations">
+            <li>Project source code, a release package, database schema, test logs and a running SPECTRE installation were not inspected. No test count, security certification, performance metric or stable-release claim is made.</li>
+            <li>The tests/ area is described as containing backend regression and safety tests. That directory description is not proof that any particular test was run or passed.</li>
+            <li>The architecture map summarizes documented responsibilities. Exact APIs, transactions, data structures, concurrency design and deployment details remain unverified.</li>
+            <li>The guide covers Windows 10/11. A supported Python version is release-dependent and unspecified; no other platform support or version is inferred.</li>
+            <li>Local-first does not remove the need to protect workstation accounts, database credentials, configuration, reports and backups.</li>
+          </ul>
+          <p class="case-source">Reference: SPECTRE v1.0 Windows Guide / pp. 1–9. Technology: p. 2; capabilities: p. 3; active gates: p. 4; workflow/AI: p. 6; security: p. 7; structure/launcher intentions: p. 8; release boundary: p. 9.</p>
+        </section>
+
+        <section class="case-section" id="related" aria-labelledby="related-title">
+          <p class="eyebrow">07 / Related work</p>
+          <h2 id="related-title">Explore adjacent disciplines.</h2>
+          <ul class="case-related">
+            <li><a href="./revenant.html"><strong>REVENANT <span aria-hidden="true">↗</span></strong><span>Authorized assessment / Concept &amp; architecture</span></a></li>
+            <li><a href="./shadowwatch.html"><strong>ShadowWatch <span aria-hidden="true">↗</span></strong><span>Security operations / Training &amp; simulation</span></a></li>
+          </ul>
+          <a class="text-link" href="./index.html">Return to all projects <span aria-hidden="true">↗</span></a>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand-link" href="../index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="../assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a></div><nav aria-label="Footer navigation"><p class="footer-label">Explore</p><ul class="footer-links"><li><a href="../index.html">Home</a></li><li><a href="../projects/index.html" aria-current="location">Projects</a></li><li><a href="../services/index.html">Services</a></li><li><a href="../about/index.html">About</a></li><li><a href="../contact/index.html">Contact</a></li><li><a href="../resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles"><p class="footer-label">Elsewhere</p><ul class="footer-links"><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub<span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn<span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart<span class="sr-only"> external site</span></a></li></ul></nav></div><div class="footer-bottom"><p>© 2026 George Youkhanna</p><p>Software engineering &amp; security</p></div></div></footer>
+</body>
+</html>

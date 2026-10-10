@@ -1,122 +1,259 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#080d13">
-    <meta name="description" content="Georges Youkhanna — cybersecurity-focused developer in Lebanon. Explore SOC training, digital forensics, and backend development projects.">
-    <meta property="og:title" content="Georges Youkhanna | Security, with purpose.">
-    <meta property="og:description" content="Security-focused systems, investigation platforms, and thoughtful development. Explore the work of Georges Youkhanna.">
-    <meta property="og:type" content="website">
-    <title>Georges Youkhanna | Cybersecurity &amp; Development</title>
-    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
-    <style type="text/tailwindcss">
-        @theme {
-            --color-ink: #080d13;
-            --color-panel: #0e161f;
-            --color-line: #23303c;
-            --color-muted: #9aaab8;
-            --color-accent: #70e0cd;
-            --color-paper: #eaf0f4;
-            --font-sans: "Segoe UI", Arial, sans-serif;
-            --font-mono: Consolas, "Liberation Mono", monospace;
-        }
-    </style>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09080D">
+  <meta name="description" content="George Youkhanna, Security-Focused Software Engineer and Co-Founder of NexusQart. Explore the portfolio and professional profile.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; script-src 'self' 'sha256-QuIF9R6AmNWJLwKa/XdijJO9pvGLdFRKIHLvcTHyi6g='; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; form-action 'none'">
+  <title>George Youkhanna | Security-Focused Software Engineer</title>
+  <link rel="icon" href="./assets/images/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/tokens.css">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/components.css">
+  <link rel="stylesheet" href="./assets/css/animations.css">
+  <link rel="stylesheet" href="./assets/css/pages.css">
+  <link rel="stylesheet" href="./assets/css/polish.css">
+  <link rel="stylesheet" href="./assets/css/home.css">
+  <link rel="stylesheet" href="./assets/css/profile.css">
+  <script type="module" src="./assets/js/main.js"></script>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="George Youkhanna">
+  <meta property="og:title" content="George Youkhanna | Security-Focused Software Engineer">
+  <meta property="og:description" content="George Youkhanna, Security-Focused Software Engineer and Co-Founder of NexusQart. Explore the portfolio and professional profile.">
+  <meta property="og:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="George Youkhanna ? Engineered to be secure.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="George Youkhanna | Security-Focused Software Engineer">
+  <meta name="twitter:description" content="George Youkhanna, Security-Focused Software Engineer and Co-Founder of NexusQart. Explore the portfolio and professional profile.">
+  <meta name="twitter:image" content="https://dodogeuser.github.io/portfolio/assets/images/brand/social-card.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","name":"George Youkhanna","jobTitle":"Security-Focused Software Engineer","sameAs":["https://github.com/dodogeuser","https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/"],"affiliation":{"@type":"Organization","name":"NexusQart","url":"https://nexusqart.com/"}},{"@type":"WebSite","name":"George Youkhanna Portfolio","description":"Security-focused software engineering and documented project architecture."}]}</script>
+<link rel="canonical" href="https://dodogeuser.github.io/portfolio/index.html">
+<meta property="og:url" content="https://dodogeuser.github.io/portfolio/index.html">
 </head>
-<body>
-    <a class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-accent focus:p-4 focus:text-ink" href="#main-content">Skip to content</a>
-    <header class="sticky top-0 z-40 border-b border-line bg-ink/95 backdrop-blur-xl">
-        <div class="shell flex min-h-20 flex-wrap items-center justify-between gap-x-5">
-            <a href="#home" aria-label="Georges Youkhanna home" class="flex items-center gap-3 py-4"><span class="font-mono text-2xl font-bold tracking-tighter">GY<span class="text-accent">.</span></span><span class="hidden border-l border-line pl-3 font-mono text-[10px] leading-4 tracking-widest text-muted sm:block">SECURITY &amp;<br>DEVELOPMENT</span></a>
-            <button id="menu-toggle" type="button" class="button button-outline my-3 px-4 md:hidden" aria-controls="main-nav" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
-            <nav id="main-nav" aria-label="Main navigation" class="flex w-full flex-wrap gap-x-6 pb-4 md:w-auto md:items-center md:gap-7 md:pb-0">
-                <a class="nav-link" href="#about">About</a><a class="nav-link" href="#projects">Projects</a><a class="nav-link" href="#skills">Expertise</a><a class="nav-link" href="#certifications">Training</a><a class="nav-link !text-accent" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-            </nav>
+<body class="homepage">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-bar container">
+      <div class="header-identity"><a class="brand-link" href="./index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="./assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><p class="header-role">Software engineering<br>&amp; security</p></div>
+      <div class="header-actions"><a class="text-link desktop-link" href="./resume/index.html">Resume <span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" data-menu-open hidden aria-controls="site-menu" aria-expanded="false" aria-haspopup="dialog">Menu <span class="menu-icon" aria-hidden="true"></span></button></div>
+    </div>
+    <nav class="fallback-nav container" aria-label="Main navigation"><ul><li><a href="./index.html" aria-current="page">Home</a></li><li><a href="./projects/index.html">Projects</a></li><li><a href="./services/index.html">Services</a></li><li><a href="./about/index.html">About</a></li><li><a href="./contact/index.html">Contact</a></li><li><a href="./resume/index.html">Resume</a></li></ul></nav>
+  </header>
+  <dialog class="site-menu" id="site-menu" aria-labelledby="menu-title">
+    <div class="container">
+      <div class="menu-header"><a class="brand-link" href="./index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="./assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a><button class="menu-close" type="button" data-menu-close autofocus>Close <span aria-hidden="true">×</span></button></div>
+      <h2 class="sr-only" id="menu-title">Site navigation</h2>
+      <div class="menu-layout">
+        <nav class="menu-primary" aria-label="Main"><ul><li><a href="./index.html" aria-current="page"><span class="nav-number" aria-hidden="true">01</span>Home</a></li><li><a href="./projects/index.html"><span class="nav-number" aria-hidden="true">02</span>Projects</a></li><li><a href="./services/index.html"><span class="nav-number" aria-hidden="true">03</span>Services</a></li><li><a href="./about/index.html"><span class="nav-number" aria-hidden="true">04</span>About</a></li><li><a href="./contact/index.html"><span class="nav-number" aria-hidden="true">05</span>Contact</a></li></ul></nav>
+        <div class="menu-secondary"><nav aria-label="More"><p class="footer-label">More to explore</p><ul><li><a href="./resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles in menu"><p class="footer-label">Elsewhere</p><ul><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span><span class="sr-only"> external site</span></a></li></ul></nav></div>
+      </div>
+      <div class="menu-bottom"><p>George Youkhanna — Security-Focused Software Engineer</p></div>
+    </div>
+  </dialog>
+  <main class="home-main" id="main-content" tabindex="-1">
+    <nav class="home-rail" aria-label="Homepage sections">
+      <a href="#home"><span class="sr-only">Introduction</span></a>
+      <a href="#featured-projects"><span class="sr-only">Featured Projects</span></a>
+      <a href="#engineering-approach"><span class="sr-only">Engineering Approach</span></a>
+      <a href="#technical-skills"><span class="sr-only">Technical Skills</span></a>
+      <a href="#about-george"><span class="sr-only">About George</span></a>
+      <a href="#contact"><span class="sr-only">Contact</span></a>
+    </nav>
+
+    <section class="home-section home-hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">GEORGE YOUKHANNA / SOFTWARE ENGINEERING &amp; SECURITY</p>
+            <h1 class="hero-title" id="hero-title"><span>ENGINEERED</span> <span>TO BE</span> <span class="hero-accent">SECURE.</span></h1>
+            <p class="hero-summary">I build security-focused software, investigation platforms, and practical engineering tools — with architecture, reliability, and clarity at the core.</p>
+            <p class="hero-identity"><span>Security-Focused Software Engineer</span> <span>Co-Founder, <a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span></a></span></p>
+            <div class="actions">
+              <a class="button" href="#featured-projects">Explore Projects <span aria-hidden="true">↘</span></a>
+              <a class="button button-secondary" href="./assets/docs/George-Youkhanna-CV.pdf" download>Download CV (PDF)</a>
+            </div>
+          </div>
+          <figure class="hero-core">
+            <div class="core-stage" data-core-stage>
+              <img src="./assets/images/illustrations/geometric-core.svg" width="800" height="800" alt="An angular geometric core within a sphere of intersecting wireframe and orbital rings." fetchpriority="high" decoding="async">
+            </div>
+            <figcaption aria-hidden="true">FORM / 01 &nbsp;—&nbsp; GEOMETRIC CORE</figcaption>
+          </figure>
         </div>
-    </header>
-    <main id="main-content">
-        <section id="home" class="hero-grid relative overflow-hidden" aria-labelledby="hero-heading">
-            <div class="shell relative grid items-center gap-4 pt-16 pb-14 md:min-h-[690px] md:grid-cols-[1.25fr_1fr] md:py-20">
-                <div class="relative z-10">
-                    <p class="eyebrow flex items-center gap-3"><span class="signal-dot h-1.5 w-1.5 rounded-full bg-accent"></span>Based in Lebanon. Building with purpose.</p>
-                    <h1 id="hero-heading" class="hero-name mt-9 font-semibold">Georges<br><span class="text-muted">Youkhanna</span><span class="text-accent">.</span></h1>
-                    <p class="mt-7 text-lg font-medium tracking-tight sm:text-xl">Cybersecurity mindset.<br class="sm:hidden"> Developer’s craft.</p>
-                    <p class="body-copy mt-4 max-w-md">I build security-focused systems, investigation platforms, and tools that turn complex problems into practical solutions.</p>
-                    <div class="mt-8 flex flex-wrap gap-3"><a class="button" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact">Get in touch</a></div>
-                    <div class="mt-10 flex items-center gap-6 font-mono text-[11px] text-muted"><a class="transition-colors hover:text-accent" href="https://github.com/dodogeuser" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a class="transition-colors hover:text-accent" href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><span class="h-px w-12 bg-line"></span></div>
-                </div>
-                <div class="hero-visual relative mx-auto w-full max-w-[460px]" aria-hidden="true">
-                    <div class="absolute top-5 left-5 font-mono text-[10px] tracking-widest text-muted">SYSTEM THINKING<br><span class="text-accent">HUMAN FOCUS</span></div>
-                    <svg viewBox="0 0 500 500" class="w-full" fill="none">
-                        <defs><radialGradient id="sphere"><stop stop-color="#70e0cd" stop-opacity=".1"/><stop offset="1" stop-color="#70e0cd" stop-opacity="0"/></radialGradient></defs>
-                        <circle cx="250" cy="250" r="174" fill="url(#sphere)" stroke="#70e0cd" stroke-opacity=".35"/>
-                        <g stroke="#70e0cd" stroke-opacity=".23"><ellipse cx="250" cy="250" rx="125" ry="174"/><ellipse cx="250" cy="250" rx="64" ry="174"/><ellipse cx="250" cy="250" rx="174" ry="56"/><ellipse cx="250" cy="250" rx="174" ry="118"/><path d="M76 250h348M250 76v348"/></g>
-                        <g class="orbit"><ellipse cx="250" cy="250" rx="217" ry="91" transform="rotate(-35 250 250)" stroke="#70e0cd" stroke-opacity=".55"/><circle cx="428" cy="125" r="5" fill="#70e0cd"/></g>
-                        <circle cx="250" cy="250" r="206" stroke="#536575" stroke-opacity=".35" stroke-dasharray="2 12"/>
-                        <path d="M250 24v20M250 456v20M24 250h20M456 250h20" stroke="#536575"/>
-                        <path d="M222 223l-24 27 24 27M278 223l24 27-24 27M260 215l-20 70" stroke="#b2f5e9" stroke-width="3"/>
-                    </svg>
-                    <div class="absolute right-3 bottom-8 border-l border-accent/50 pl-3 font-mono text-[10px] leading-5 text-muted">01 / ANALYZE<br>02 / BUILD<br>03 / REFINE</div>
-                </div>
+        <div class="hero-baseline">
+          <p class="section-caption">Security by design. Clarity by intent.</p>
+          <a href="#featured-projects">Selected work <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section" id="featured-projects" aria-labelledby="featured-title">
+      <div class="container">
+        <header class="home-section-head">
+          <p class="eyebrow">01 / Selected Projects</p>
+          <h2 id="featured-title">Systems with<br>a clear purpose.</h2>
+          <p class="section-lede">Investigation, authorized assessment, and analyst training — each with a distinct scope.</p>
+        </header>
+        <div class="featured-list">
+          <article class="feature feature-spectre" aria-labelledby="spectre-title">
+            <figure class="feature-art">
+              <img src="./assets/images/illustrations/spectre-network.svg" width="640" height="420" alt="Illustrative case and evidence relationships linked across a discovery graph." loading="lazy" decoding="async">
+              <figcaption>Illustrative evidence map</figcaption>
+            </figure>
+            <div class="feature-copy">
+              <p class="feature-kicker"><span class="project-number">01</span> Project overview</p>
+              <img class="project-identity-logo" src="./assets/images/projects/spectre-logo.png" width="1289" height="1221" alt="" aria-hidden="true" loading="lazy" decoding="async"><h3 id="spectre-title">SPECTRE</h3>
+              <p class="feature-subtitle">Local-First OSINT<br>Investigation Platform</p>
+              <p class="feature-description">A local-first approach to organizing investigations around cases, connected entities, and evidence.</p>
+              <p class="feature-focus"><span>Design focus</span>Case scope. Evidence provenance. Passive-first workflows.</p>
+              <a class="feature-link" href="./projects/spectre.html">View Case Study<span class="sr-only">: SPECTRE</span> <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="border-t border-line"><div class="shell flex flex-wrap items-center justify-between gap-4 py-5 font-mono text-[10px] uppercase tracking-[.15em] text-muted"><span>Security-first thinking</span><span>Practical engineering</span><a href="#about" class="text-paper">A little more about me <span class="ml-2 text-accent" aria-hidden="true">↓</span></a></div></div>
-        </section>
-
-        <section id="about" class="section" aria-labelledby="about-heading">
-            <div class="shell grid gap-10 md:grid-cols-[.65fr_1.35fr] md:gap-20">
-                <div><p class="eyebrow">01 / The person behind the work</p><h2 id="about-heading" class="section-title">Security,<br>with purpose.</h2></div>
-                <div><p class="text-xl leading-9 tracking-tight sm:text-2xl">I’m Georges, an IT and cybersecurity-focused developer with a practical approach to building and understanding systems.</p><p class="body-copy mt-5">My work brings together security-oriented applications, SOC training environments, digital forensics, and backend development. I’m interested in how systems work, where they break, and how to make them better.</p>
-                    <dl class="mt-9 grid grid-cols-2 gap-x-8 gap-y-6 border-t border-line pt-7"><div><dt class="eyebrow !text-muted">Based in</dt><dd class="mt-2 text-sm">Lebanon</dd></div><div><dt class="eyebrow !text-muted">Focus</dt><dd class="mt-2 text-sm">Cybersecurity &amp; development</dd></div><div><dt class="eyebrow !text-muted">Approach</dt><dd class="mt-2 text-sm">Understand. Build. Refine.</dd></div><div><dt class="eyebrow !text-muted">Languages</dt><dd class="mt-2 text-sm">English · Arabic · French</dd></div></dl>
-                </div>
+          </article>
+          <article class="feature feature-revenant" aria-labelledby="revenant-title">
+            <figure class="feature-art">
+              <img src="./assets/images/illustrations/revenant-scope.svg" width="640" height="420" alt="Conceptual authorized assessment workflow inside a defined scope boundary; proposed, not verified implementation." loading="lazy" decoding="async">
+              <figcaption>Conceptual scope diagram</figcaption>
+            </figure>
+            <div class="feature-copy">
+              <p class="feature-kicker"><span class="project-number">02</span> Concept / Architecture</p>
+              <img class="project-identity-logo" src="./assets/images/projects/revenant-logo.png" width="1254" height="1254" alt="" aria-hidden="true" loading="lazy" decoding="async"><h3 id="revenant-title">REVENANT</h3>
+              <p class="feature-subtitle">Authorized Security<br>Assessment Platform</p>
+              <p class="feature-description">A platform concept for structured security assessment, beginning with engagement authorization and an explicit target scope.</p>
+              <p class="feature-focus"><span>Proposed safeguards</span>Scoped access. Rules of engagement. Controlled validation.</p>
+              <a class="feature-link" href="./projects/revenant.html">View Case Study<span class="sr-only">: REVENANT</span> <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
-
-        <section id="projects" class="section bg-panel/30" aria-labelledby="projects-heading">
-            <div class="shell">
-                <div class="flex flex-wrap items-end justify-between gap-6"><div><p class="eyebrow">02 / Selected projects</p><h2 id="projects-heading" class="section-title">Ideas, put to work.</h2></div><p class="max-w-xs text-sm leading-6 text-muted">Exploring security operations, digital evidence, and research through code.</p></div>
-                <div id="project-filters" class="mt-9 flex flex-wrap gap-2" role="group" aria-label="Filter projects" hidden><button class="filter" type="button" data-filter="all" aria-pressed="true">All projects <span class="ml-2 opacity-60">03</span></button><button class="filter" type="button" data-filter="security" aria-pressed="false">Security</button><button class="filter" type="button" data-filter="research" aria-pressed="false">Research</button></div>
-                <p id="filter-status" class="sr-only" role="status"></p>
-                <div class="mt-8 grid gap-5 md:grid-cols-3">
-                    <article class="project-card" data-category="security">
-                        <div class="project-art diagram-grid"><span class="absolute top-4 left-4 font-mono text-[10px] text-muted">01 / SECURITY OPERATIONS</span><svg width="160" height="130" viewBox="0 0 160 130" fill="none" aria-hidden="true"><path d="M80 15l43 17v33c0 26-28 42-43 50-15-8-43-24-43-50V32z" stroke="#70e0cd" stroke-width="1.5"/><path d="M80 30l29 12v23c0 16-18 31-29 37-11-6-29-21-29-37V42z" stroke="#70e0cd" stroke-opacity=".3"/><path d="M14 68h40l10-16 14 32 14-22 8 6h46" stroke="#70e0cd" stroke-width="1.5"/><circle cx="14" cy="68" r="3" fill="#70e0cd"/><circle cx="146" cy="68" r="3" fill="#70e0cd"/></svg></div>
-                        <div class="flex flex-1 flex-col p-6"><p class="eyebrow !text-[10px]">Operational · Training simulator</p><h3 class="mt-4 text-2xl font-semibold tracking-tight">ShadowWatch</h3><p class="mt-3 flex-1 text-sm leading-7 text-muted">A SOC training environment connecting alert triage, incident management, and threat investigation.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">SOC training</span><span class="tag">Incident response</span></div><a href="projects/shadowwatch.html" class="mt-7 flex min-h-11 items-center justify-between border-t border-line pt-4 text-sm font-medium hover:text-accent">Explore ShadowWatch <span class="text-accent" aria-hidden="true">↗</span></a></div>
-                    </article>
-                    <article class="project-card" data-category="security">
-                        <div class="project-art diagram-grid"><span class="absolute top-4 left-4 font-mono text-[10px] text-muted">02 / DIGITAL FORENSICS</span><svg width="160" height="130" viewBox="0 0 160 130" fill="none" aria-hidden="true"><circle cx="72" cy="57" r="32" stroke="#8ebcfa" stroke-width="1.5"/><circle cx="72" cy="57" r="21" stroke="#8ebcfa" stroke-opacity=".4"/><path d="M96 81l28 28M49 57h46M72 34v46M20 21h18M20 21v18M125 21h15v18M20 96v15h18" stroke="#8ebcfa"/><circle cx="72" cy="57" r="4" fill="#8ebcfa"/></svg></div>
-                        <div class="flex flex-1 flex-col p-6"><p class="eyebrow !text-[10px] !text-blue-300">In development · Phase 06</p><h3 class="mt-4 text-2xl font-semibold tracking-tight">TRACEZERO</h3><p class="mt-3 flex-1 text-sm leading-7 text-muted">A digital forensics platform centered on evidence integrity, scoped access, and chain of custody.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Digital evidence</span><span class="tag">SHA-256</span></div><a href="projects/tracezero.html" class="mt-7 flex min-h-11 items-center justify-between border-t border-line pt-4 text-sm font-medium hover:text-accent">Explore TRACEZERO <span class="text-accent" aria-hidden="true">↗</span></a></div>
-                    </article>
-                    <article class="project-card" data-category="research">
-                        <div class="project-art diagram-grid"><span class="absolute top-4 left-4 font-mono text-[10px] text-muted">03 / STRATEGY RESEARCH</span><svg width="170" height="130" viewBox="0 0 170 130" fill="none" aria-hidden="true"><path d="M15 22v87h141" stroke="#536575"/><path d="M26 83l17-19 18 9 20-32 19 10 21-20 27 9" stroke="#d8bc89" stroke-width="1.5"/><path d="M26 91l18-8 18-5 19-15 20-1 22-12 25-1" stroke="#d8bc89" stroke-opacity=".4" stroke-dasharray="4 4"/><path d="M43 55v29M81 29v30M121 20v27" stroke="#d8bc89"/><circle cx="148" cy="40" r="4" fill="#d8bc89"/></svg></div>
-                        <div class="flex flex-1 flex-col p-6"><p class="eyebrow !text-[10px] !text-amber-200">Research · Simulation</p><h3 class="mt-4 text-2xl font-semibold tracking-tight">Crypto Scalping Bot</h3><p class="mt-3 flex-1 text-sm leading-7 text-muted">A research project exploring EMA crossover strategies for BTC/USDT through simulation and backtesting.</p><div class="mt-5 flex flex-wrap gap-2"><span class="tag">Backtesting</span><span class="tag">EMA strategies</span></div><a href="projects/crypto-scalping-bot.html" class="mt-7 flex min-h-11 items-center justify-between border-t border-line pt-4 text-sm font-medium hover:text-accent">Explore the research <span class="text-accent" aria-hidden="true">↗</span></a></div>
-                    </article>
-                </div>
+          </article>
+          <article class="feature feature-shadowwatch" aria-labelledby="shadowwatch-title">
+            <figure class="feature-art">
+              <img src="./assets/images/illustrations/shadowwatch-flow.svg" width="640" height="420" alt="Illustrative simulated alerts moving through triage and an incident training workflow, not live monitoring." loading="lazy" decoding="async">
+              <figcaption>Simulated analyst workflow</figcaption>
+            </figure>
+            <div class="feature-copy">
+              <p class="feature-kicker"><span class="project-number">03</span> Training / Simulation</p>
+              <h3 id="shadowwatch-title">ShadowWatch</h3>
+              <p class="feature-subtitle">SOC Training Simulator</p>
+              <p class="feature-description">A training environment centered on simulated alerts, analyst triage, and incident workflows.</p>
+              <p class="feature-focus"><span>Training boundary</span>Practice and simulation, separate from live SOC monitoring.</p>
+              <a class="feature-link" href="./projects/shadowwatch.html">View Case Study<span class="sr-only">: ShadowWatch</span> <span aria-hidden="true">↗</span></a>
             </div>
-        </section>
+          </article>
+        </div>
+        <div class="featured-end">
+          <p>Conceptual work is labelled. Explore the documented architecture in each case study.</p>
+          <a class="text-link" href="./projects/index.html">All Projects <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
 
-        <section id="skills" class="section" aria-labelledby="skills-heading"><div class="shell"><p class="eyebrow">03 / Areas of focus</p><h2 id="skills-heading" class="section-title">A connected skill set.</h2><p class="body-copy mt-5 max-w-xl">Security and development inform each other. These are the areas that connect my projects and ongoing learning.</p>
-            <div class="mt-12 grid gap-x-10 md:grid-cols-3">
-                <div class="border-t border-line py-7"><span class="font-mono text-xl text-accent" aria-hidden="true">[01]</span><h3 class="mt-5 text-xl font-medium">Security operations</h3><p class="mt-3 text-sm leading-7 text-muted">Alert triage, incident response, threat intelligence, and SOC training environments.</p></div>
-                <div class="border-t border-line py-7"><span class="font-mono text-xl text-accent" aria-hidden="true">[02]</span><h3 class="mt-5 text-xl font-medium">Digital forensics</h3><p class="mt-3 text-sm leading-7 text-muted">Evidence integrity, chain of custody, scoped authorization, and investigation workflows.</p></div>
-                <div class="border-t border-line py-7"><span class="font-mono text-xl text-accent" aria-hidden="true">[03]</span><h3 class="mt-5 text-xl font-medium">Backend development</h3><p class="mt-3 text-sm leading-7 text-muted">Security-oriented applications, access control, data handling, and system design.</p></div>
-            </div>
-        </div></section>
+    <section class="home-section" id="engineering-approach" aria-labelledby="approach-title">
+      <div class="container">
+        <header class="home-section-head">
+          <p class="eyebrow">02 / Engineering Approach</p>
+          <h2 id="approach-title">Trust starts with<br>the boundaries.</h2>
+          <p class="section-lede">Clear responsibilities, traceable evidence, and honest limitations shape how I approach a system.</p>
+        </header>
+        <div class="approach-grid">
+          <article class="approach-item">
+            <span class="approach-index" aria-hidden="true">01 / SCOPE</span>
+            <h3>Define permission before capability.</h3>
+            <p>REVENANT’s conceptual workflow begins with authorization and scope, before assessment. The intended boundary is part of the architecture.</p>
+          </article>
+          <article class="approach-item">
+            <span class="approach-index" aria-hidden="true">02 / EVIDENCE</span>
+            <h3>Keep evidence connected to context.</h3>
+            <p>SPECTRE’s design centers on case-linked evidence and provenance: where information came from matters alongside what it shows.</p>
+          </article>
+          <article class="approach-item">
+            <span class="approach-index" aria-hidden="true">03 / PURPOSE</span>
+            <h3>Design for the actual environment.</h3>
+            <p>ShadowWatch is a training simulator. Keeping practice distinct from live operations makes the purpose and limits of the tool clear.</p>
+          </article>
+          <article class="approach-item">
+            <span class="approach-index" aria-hidden="true">04 / VERIFICATION</span>
+            <h3>Make claims that evidence can support.</h3>
+            <p>I separate documented scope from planned work and make limitations explicit. Verification should explain what a system does, and where the evidence ends.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <section id="certifications" class="section bg-panel/30" aria-labelledby="training-heading"><div class="shell grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p class="eyebrow">04 / Certifications &amp; training</p><h2 id="training-heading" class="section-title">Always a student.</h2><p class="body-copy mt-5 max-w-sm">Continuing to explore the offensive and defensive sides of security, one discipline at a time.</p></div><div>
-            <article class="flex items-start gap-5 border-b border-line py-6 first:pt-0"><span class="mt-1 font-mono text-xs text-accent">01</span><div><p class="font-mono text-[11px] uppercase tracking-wider text-muted">Cisco Networking Academy</p><h3 class="mt-2 text-lg font-medium">Introduction to Cybersecurity</h3></div></article>
-            <article class="flex items-start gap-5 border-b border-line py-6"><span class="mt-1 font-mono text-xs text-accent">02</span><div><p class="font-mono text-[11px] uppercase tracking-wider text-muted">LetsDefend</p><h3 class="mt-2 text-lg font-medium">Web Attack Investigator</h3></div></article>
-            <article class="flex items-start gap-5 border-b border-line py-6"><span class="mt-1 font-mono text-xs text-accent">03</span><div><p class="font-mono text-[11px] uppercase tracking-wider text-muted">Red Team Leaders</p><h3 class="mt-2 text-lg font-medium">Game Hacking Development</h3></div></article>
-            <article class="flex items-start gap-5 border-b border-line py-6"><span class="mt-1 font-mono text-xs text-accent">04</span><div><p class="font-mono text-[11px] uppercase tracking-wider text-muted">Security Blue Team</p><h3 class="mt-2 text-lg font-medium">Vulnerability Management</h3></div></article>
-        </div></div></section>
+    <section class="home-section" id="technical-skills" aria-labelledby="skills-title">
+      <div class="container skills-layout">
+        <header>
+          <p class="eyebrow">03 / Technical Skills</p>
+          <h2 id="skills-title">Across the<br>system.</h2>
+          <p class="section-lede">Software, security, systems, and AI — connected by an interest in how the whole system works.</p>
+        </header>
+<div class="skills-matrix" aria-label="Skills and project context"><details><summary>Python</summary><div class="skills-detail"><p>Python programming, including the FastAPI application layer in SPECTRE.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a></p></div></details>
+<details><summary>PHP</summary><div class="skills-detail"><p>PHP application development for training and local forensics platforms.</p><p class="skills-links"><a href="./projects/shadowwatch.html">ShadowWatch case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>C++</summary><div class="skills-detail"><p>C++ programming and low-level software concepts.</p></div></details>
+<details><summary>JavaScript</summary><div class="skills-detail"><p>Browser interfaces and interactive functionality using vanilla JavaScript.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a><a href="./projects/shadowwatch.html">ShadowWatch case study</a></p></div></details>
+<details><summary>HTML5</summary><div class="skills-detail"><p>Semantic web interfaces and accessible static content.</p><p class="skills-links"><a href="./projects/shadowwatch.html">ShadowWatch case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>CSS3</summary><div class="skills-detail"><p>Responsive layouts, visual styling and reusable interface components.</p><p class="skills-links"><a href="./projects/shadowwatch.html">ShadowWatch case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>MySQL</summary><div class="skills-detail"><p>Relational persistence for investigation and training applications.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>Linux</summary><div class="skills-detail"><p>Linux operating systems and command-line environments.</p></div></details>
+<details><summary>Kali Linux</summary><div class="skills-detail"><p>Kali Linux for cybersecurity learning and authorized security practice.</p></div></details>
+<details><summary>Windows</summary><div class="skills-detail"><p>Windows application environments and local development workflows.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a></p></div></details>
+<details><summary>OSINT</summary><div class="skills-detail"><p>Open-source intelligence, passive collection and case-linked investigation.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a></p></div></details>
+<details><summary>SOC triage</summary><div class="skills-detail"><p>Alert triage and investigation practice through simulated SOC workflows.</p><p class="skills-links"><a href="./projects/shadowwatch.html">ShadowWatch case study</a></p></div></details>
+<details><summary>Incident workflows</summary><div class="skills-detail"><p>Incident management, analyst responsibilities and response workflow organization.</p><p class="skills-links"><a href="./projects/shadowwatch.html">ShadowWatch case study</a></p></div></details>
+<details><summary>Vulnerability management</summary><div class="skills-detail"><p>Vulnerability management fundamentals, assessment scope and remediation concepts.</p><p class="skills-links"><a href="./projects/revenant.html">REVENANT case study</a></p></div></details>
+<details><summary>Secure application design</summary><div class="skills-detail"><p>Authorization boundaries, scoped access and evidence-aware application design.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>AI-assisted development</summary><div class="skills-detail"><p>AI-assisted application development and practical engineering workflows.</p></div></details>
+<details><summary>AI integration</summary><div class="skills-detail"><p>AI integration concepts and evidence-grounded assistance design.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a></p></div></details>
+<details><summary>Prompt engineering</summary><div class="skills-detail"><p>Clear instructions, contextual prompts and structured AI interactions.</p></div></details>
+<details><summary>AI/ML fundamentals</summary><div class="skills-detail"><p>Foundational artificial intelligence and machine learning concepts.</p></div></details>
+<details><summary>System analysis &amp; design</summary><div class="skills-detail"><p>System analysis, component responsibilities and explicit workflow boundaries.</p><p class="skills-links"><a href="./projects/spectre.html">SPECTRE case study</a><a href="./projects/tracezero.html">TRACEZERO case study</a></p></div></details>
+<details><summary>Networking fundamentals</summary><div class="skills-detail"><p>Physical and virtual networking fundamentals.</p></div></details>
+<details><summary>Reverse engineering</summary><div class="skills-detail"><p>Reverse engineering concepts and software behavior analysis.</p></div></details>
+<details><summary>Memory manipulation</summary><div class="skills-detail"><p>Memory manipulation concepts and low-level software research.</p></div></details>
+</div>
+      </div>
+    </section>
 
-        <section id="terminal" class="section" aria-labelledby="terminal-heading" hidden><div class="shell grid items-center gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p class="eyebrow">A different way to explore</p><h2 id="terminal-heading" class="section-title">Hello, terminal.</h2><p class="body-copy mt-5 max-w-sm">Prefer a command line? Take a quick look around. Start with <code class="text-accent">help</code>.</p></div><div class="overflow-hidden border border-line bg-panel"><div class="flex items-center justify-between border-b border-line px-5 py-3"><div class="flex gap-1.5" aria-hidden="true"><span class="h-2 w-2 rounded-full bg-line"></span><span class="h-2 w-2 rounded-full bg-line"></span><span class="h-2 w-2 rounded-full bg-accent/60"></span></div><span class="font-mono text-[10px] text-muted">georges@portfolio: ~</span></div><div class="p-5 font-mono text-xs leading-7 sm:p-6"><div id="terminal-output" class="h-44 overflow-y-auto break-words" role="log" aria-label="Terminal output" aria-live="polite" tabindex="0"><p class="text-accent">Welcome. Good to have you here.</p><p class="text-muted">Type help for available commands.</p></div><form id="terminal-form" class="mt-3 flex items-center gap-3 border-t border-line pt-3"><label for="terminal-input" class="text-accent"><span aria-hidden="true">~ $</span><span class="sr-only">Terminal command</span></label><input id="terminal-input" name="command" class="min-w-0 flex-1 bg-transparent px-2 text-paper" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="80" placeholder="help"><button type="submit" class="min-h-11 px-3 text-accent" aria-label="Run command">↵</button></form></div></div></div></section>
+    <section class="home-section home-about" id="about-george" aria-labelledby="about-title">
+      <div class="container about-layout">
+        <header>
+          <p class="eyebrow">04 / About</p>
+          <h2 id="about-title">A practical mind.<br>A considered approach.</h2>
+          <div class="education-note">
+            <span class="section-caption">Education</span>
+            <p>Information Technology<br>Notre Dame University–Louaize</p>
+            <p class="muted education-status">Studying IT and cybersecurity at NDU. Expected graduation: Spring 2027.</p>
+          </div>
+        </header>
+        <div class="about-copy">
+          <p>I’m <strong>George Youkhanna</strong>, a Security-Focused Software Engineer and Co-Founder of <a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span></a>.</p>
+          <p>My approach is project-oriented: understand the problem, define the boundaries, and build with architecture, reliability, and clarity in mind.</p>
+          <p>I’m interested in useful systems — and in designing security into them from the beginning.</p>
+          <a class="text-link" href="./resume/index.html">View Resume</a>
+          <a class="text-link" href="./about/index.html">More About Me <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
 
-        <section id="contact" class="section bg-panel/40" aria-labelledby="contact-heading"><div class="shell grid gap-12 lg:grid-cols-2 lg:gap-20"><div><p class="eyebrow">05 / Let’s connect</p><h2 id="contact-heading" class="section-title">Good work starts<br>with a conversation<span class="text-accent">.</span></h2><p class="body-copy mt-6 max-w-sm">Have a project in mind, an opportunity to share, or an interesting problem? I’d like to hear about it.</p><a class="mt-7 inline-block break-all border-b border-accent/40 pb-1 text-base hover:text-accent" href="mailto:georgesyouhannna@hotmail.com">georgesyouhannna@hotmail.com</a><div class="mt-4"><button id="copy-email" type="button" class="min-h-11 font-mono text-xs text-muted hover:text-accent" hidden>Copy email address <span aria-hidden="true">↗</span></button><p id="copy-status" class="text-sm text-accent" role="status"></p></div><div class="mt-8 flex flex-wrap gap-6 text-sm text-muted"><a class="hover:text-accent" href="https://github.com/dodogeuser" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="hover:text-accent" href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="hover:text-accent" href="tel:+9613369352">+961 33 693 52</a></div></div>
-            <div><form id="contact-form" hidden><div class="grid gap-5 sm:grid-cols-2"><div><label for="contact-name" class="text-xs text-muted">Your name</label><input id="contact-name" class="field" name="name" autocomplete="name" placeholder="Alex Morgan" maxlength="100" required></div><div><label for="contact-email" class="text-xs text-muted">Email address</label><input id="contact-email" class="field" name="email" type="email" autocomplete="email" placeholder="alex@example.com" maxlength="254" required></div></div><div class="mt-5"><label for="contact-subject" class="text-xs text-muted">Subject</label><input id="contact-subject" class="field" name="subject" placeholder="Let’s build something" maxlength="150" required></div><div class="mt-5"><label for="contact-message" class="text-xs text-muted">Your message</label><textarea id="contact-message" class="field min-h-32 resize-y" name="message" rows="4" placeholder="Tell me a little about what you have in mind…" maxlength="2000" required></textarea></div><div class="mt-6 flex flex-wrap items-center gap-4"><button class="button" type="submit">Prepare email <span aria-hidden="true">↗</span></button><p class="max-w-[230px] text-xs leading-5 text-muted">Prepares a draft in your email app.<br>Nothing is sent from this website.</p></div><div id="contact-result" class="mt-5 border-l-2 border-accent pl-4" hidden><p id="contact-status" class="text-sm leading-6 text-accent" role="status"></p><a id="email-draft" class="mt-3 inline-flex min-h-11 items-center text-sm underline underline-offset-4" href="mailto:georgesyouhannna@hotmail.com">Open email draft ↗</a><p class="mt-2 text-xs leading-6 text-muted">No email app? Copy your message and email me directly at the address alongside.</p></div></form><noscript><p class="body-copy border border-line p-6">Use the email link to get in touch. The draft builder is available when JavaScript is enabled.</p></noscript></div>
-        </div></section>
-    </main>
-    <footer class="border-t border-line"><div class="shell flex flex-wrap items-center justify-between gap-5 py-7"><a href="#home" class="font-mono text-xl font-bold" aria-label="Back to top">GY<span class="text-accent">.</span></a><p class="font-mono text-[10px] tracking-wider text-muted">© <span data-year>2026</span> GEORGES YOUKHANNA</p><a href="#home" class="font-mono text-[10px] tracking-wider text-muted hover:text-accent">BACK TO TOP ↑</a></div></footer>
+    <section class="home-section home-contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-composition">
+        <p class="eyebrow">05 / Contact</p>
+        <h2 class="closing-title" id="contact-title"><span>BUILT WITH PURPOSE.</span> <span class="closing-accent">ENGINEERED FOR TRUST.</span></h2>
+        <p class="contact-copy">Have a project or an engineering conversation in mind? Email me or connect through my professional profiles.</p>
+        <ul class="home-contact-links">
+          <li><a href="mailto:georgesyouhannna@hotmail.com">Email <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart <span aria-hidden="true">↗</span></a></li>
+        </ul>
+        <img class="contact-core" src="./assets/images/illustrations/geometric-core.svg" width="800" height="800" alt="" aria-hidden="true" loading="lazy" decoding="async">
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><a class="brand-link" href="./index.html" aria-label="George Youkhanna — Home"><img class="brand-mark" src="./assets/images/brand/gy-monogram.svg" width="68" height="64" alt=""><span class="brand-name">George Youkhanna</span></a></div><nav aria-label="Footer navigation"><p class="footer-label">Explore</p><ul class="footer-links"><li><a href="./index.html" aria-current="page">Home</a></li><li><a href="./projects/index.html">Projects</a></li><li><a href="./services/index.html">Services</a></li><li><a href="./about/index.html">About</a></li><li><a href="./contact/index.html">Contact</a></li><li><a href="./resume/index.html">Resume</a></li></ul></nav><nav aria-label="Professional profiles"><p class="footer-label">Elsewhere</p><ul class="footer-links"><li><a href="https://github.com/dodogeuser" rel="noopener noreferrer">GitHub<span class="sr-only"> external site</span></a></li><li><a href="https://www.linkedin.com/in/george-youkhanna-a9a16b3a1/" rel="noopener noreferrer">LinkedIn<span class="sr-only"> external site</span></a></li><li><a href="https://nexusqart.com/" rel="noopener noreferrer">NexusQart<span class="sr-only"> external site</span></a></li></ul></nav></div><div class="footer-bottom"><p>© 2026 George Youkhanna</p><p>Software engineering &amp; security</p></div></div></footer>
 </body>
 </html>

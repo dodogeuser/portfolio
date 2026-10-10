@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Business Process Automation technical motif</title>
+  <desc id="desc">Original decorative line illustration for an engineering collaboration area; not a product logo or an implementation diagram.</desc>
+  <path d="M8 24V8H24M136 8H152V24M8 136V152H24M136 152H152V136" fill="none" stroke="#55418A" stroke-width="1"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1.4" stroke-linejoin="round"><rect x="16" y="62" width="32" height="36" rx="5"/><rect x="64" y="62" width="32" height="36" rx="5"/><rect x="112" y="62" width="32" height="36" rx="5"/><path d="M48 80H64M96 80H112M52 76L56 80L52 84M100 76L104 80L100 84M128 54V31H32V54M32 106V129H128V106"/><path d="M28 48L32 54L36 48M124 112L128 106L132 112"/></g>
+</svg>

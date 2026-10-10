@@ -204,3 +204,7 @@ No pre-existing application files were present or modified. PDF extraction and r
 ## Next phase
 
 Implement Phase 11 restrained animations: scroll reveal, border pulse, active navigation, project hover, grid movement, button glow and section-number animation, alongside existing typing/cursor behavior. Respect reduced motion, preserve non-JavaScript visibility and removed case-study sections. Test, update this log and report the checkpoint.
+
+## Carbon & Violet release - 2026-10-10
+
+Owner authorized update of dodogeuser/portfolio. Published files prepared from the approved static source workspace; no private planning/tests/source PDFs copied. Current CV and original supplied logos are approved public assets. Previous CDN design/contact draft UI is superseded by owner-approved static architecture. Legacy page URLs redirect to current routes; all original files/history are retained. Publishing source remains main/root with .nojekyll. Production canonicals, social image URLs, sitemap and depth-independent 404 use https://dodogeuser.github.io/portfolio/. Source/adapter/local HTTP checks pass; live results will follow. Browser visual/AT/console/GPU/performance acceptance is not claimed.

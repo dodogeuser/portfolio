@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 435" role="img" aria-labelledby="revenant-map-title revenant-map-desc">
+  <title id="revenant-map-title">REVENANT responsibility map</title>
+  <desc id="revenant-map-desc">The original overview documents the product concept and intended workflow. No implementation language, completed execution module or running control has been verified. Connections explain responsibilities, not verified runtime interfaces.</desc>
+  <path d="M20 24H940V411H20Z M20 55H940" fill="none" stroke="#55418A" stroke-width="1" opacity=".4"/>
+  <text x="40" y="47" fill="#C6A6BC" font-family="monospace" font-size="15">CONCEPT / ARCHITECTURE</text>
+  <path class="architecture-edge" data-architecture-edge="engagement scope" d="M170 127H480" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="scope discovery" d="M480 127H790" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="scope assessment" d="M480 127V209.5H170V292" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="discovery assessment" d="M790 127V209.5H170V292" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="assessment evidence" d="M170 292H480" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="evidence findings" d="M480 292H790" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <path class="architecture-edge" data-architecture-edge="findings scope" d="M790 292V209.5H480V127" fill="none" stroke="#C6A6BC" stroke-width="1.2"/>
+  <g class="architecture-node" data-architecture-node="engagement" data-component-status="concept">
+    <rect x="40" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Engagement</text>
+    <text x="56" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Permission &amp; rules</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="scope" data-component-status="concept">
+    <rect x="350" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Scope boundary</text>
+    <text x="366" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Allowlist &amp; exclusions</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="discovery" data-component-status="concept">
+    <rect x="660" y="85" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="117" fill="#F0EBFF" font-family="monospace" font-size="16">Discovery</text>
+    <text x="676" y="146" fill="#B6AEC9" font-family="monospace" font-size="14">Recon &amp; enumeration</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="assessment" data-component-status="concept">
+    <rect x="40" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="56" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Assessment</text>
+    <text x="56" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Review &amp; validation</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="evidence" data-component-status="concept">
+    <rect x="350" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="366" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Evidence graph</text>
+    <text x="366" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Observations &amp; proof</text>
+  </g>
+  <g class="architecture-node" data-architecture-node="findings" data-component-status="concept">
+    <rect x="660" y="250" width="260" height="84" rx="8" fill="#110E19" stroke="#786695" stroke-width="1.2"/>
+    <text x="676" y="282" fill="#F0EBFF" font-family="monospace" font-size="16">Findings &amp; retest</text>
+    <text x="676" y="311" fill="#B6AEC9" font-family="monospace" font-size="14">Remediation &amp; report</text>
+  </g>
+  <text x="40" y="397" fill="#B6AEC9" font-family="monospace" font-size="14">Explanatory relationships / not verified runtime interfaces</text>
+</svg>

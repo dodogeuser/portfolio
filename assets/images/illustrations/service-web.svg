@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Full-Stack Web Development technical motif</title>
+  <desc id="desc">Original decorative line illustration for an engineering collaboration area; not a product logo or an implementation diagram.</desc>
+  <path d="M8 24V8H24M136 8H152V24M8 136V152H24M136 152H152V136" fill="none" stroke="#55418A" stroke-width="1"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1.4" stroke-linejoin="round"><rect x="24" y="31" width="112" height="96" rx="6"/><path d="M24 51H136M47 71L35 84L47 97M113 71L125 84L113 97M87 68L73 102M53 139H107M80 127V139"/><circle cx="36" cy="41" r="2"/><circle cx="46" cy="41" r="2"/><circle cx="56" cy="41" r="2"/></g>
+</svg>

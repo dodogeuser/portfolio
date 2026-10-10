@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Secure Software Development technical motif</title>
+  <desc id="desc">Original decorative line illustration for an engineering collaboration area; not a product logo or an implementation diagram.</desc>
+  <path d="M8 24V8H24M136 8H152V24M8 136V152H24M136 152H152V136" fill="none" stroke="#55418A" stroke-width="1"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1.4" stroke-linejoin="round"><path d="M80 26L124 45V82C124 106 103 123 80 136C57 123 36 106 36 82V45Z"/><path d="M58 80L73 95L105 62"/><path d="M18 54H30M130 54H142M80 10V20M80 142V152"/></g>
+</svg>

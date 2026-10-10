@@ -1,0 +1,41 @@
+body { min-height: 100svh; display: flex; flex-direction: column; }
+.container { width: min(calc(100% - var(--page-gutter) * 2), var(--content-max)); margin-inline: auto; }
+main { flex: 1; padding-block-end: var(--space-9); }
+.site-header { border-block-end: 1px solid var(--border); }
+.header-bar { display: flex; align-items: center; justify-content: space-between; gap: var(--space-5); min-height: 100px; }
+.header-identity { display: flex; align-items: center; gap: var(--space-4); min-width: 0; }
+.header-actions { display: flex; align-items: center; gap: var(--space-6); }
+.fallback-nav { padding-block: 0 var(--space-5); }
+.fallback-nav ul { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); list-style: none; padding: 0; }
+.navigation-ready .fallback-nav { display: none; }
+.page-intro { padding-block: clamp(3rem, 7vw, 6.5rem) var(--space-7); }
+.page-intro > * + * { margin-block-start: var(--space-5); }
+.page-intro h1 { max-width: 16ch; }
+.content-grid { display: grid; gap: var(--space-5); align-items: start; }
+.stack > * + * { margin-block-start: var(--space-5); }
+.section-heading { display: flex; justify-content: space-between; gap: var(--space-5); align-items: baseline; margin-block-end: var(--space-5); }
+.site-footer { border-block-start: 1px solid var(--border); padding-block: var(--space-7) var(--space-5); }
+.footer-top { display: grid; gap: var(--space-6); }
+.footer-links { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); list-style: none; padding: 0; }
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-4); margin-block-start: var(--space-7); padding-block-start: var(--space-5); border-block-start: 1px solid var(--border); }
+@media (min-width: 40rem) {
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 48rem) {
+  .content-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: var(--space-6); }
+}
+@media (min-width: 64rem) {
+  .header-bar { min-height: 112px; }
+  .footer-top { grid-template-columns: 1.1fr 1.5fr 1fr; }
+}
+@media (min-width: 90rem) {
+  .page-intro { padding-block-start: var(--space-10); }
+}
+@media (max-width: 39.999rem) {
+  .header-bar { min-height: 88px; gap: var(--space-3); }
+  .header-identity { gap: var(--space-3); }
+  .header-role, .desktop-link { display: none; }
+  main { padding-block-end: var(--space-8); }
+  .footer-bottom { margin-block-start: var(--space-6); }
+}
+

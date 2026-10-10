@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="tracezero-art-title tracezero-art-desc">
+  <title id="tracezero-art-title">TRACEZERO — evidence, custody and exploration</title>
+  <desc id="tracezero-art-desc">An illustrative workflow linking a text-evidence container, custody records and a case explorer. Silver and violet traces reflect the reported initial phases 01–06 investigation and training scope. This is original explanatory art, not a verified system topology, later-module timeline or claim of legal chain-of-custody admissibility.</desc>
+  <defs>
+    <linearGradient id="tracezero-line" x1="107" y1="114" x2="530" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D6D2DE"/><stop offset=".55" stop-color="#A28AF5"/><stop offset="1" stop-color="#D6D2DE"/>
+    </linearGradient>
+    <radialGradient id="tracezero-halo">
+      <stop stop-color="#A28AF5" stop-opacity=".07"/><stop offset="1" stop-color="#A28AF5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="323" cy="210" rx="238" ry="177" fill="url(#tracezero-halo)"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1" opacity=".15">
+    <path d="M30 88H610M30 332H610M110 36V386M530 36V386"/>
+    <path d="M49 210H591M320 49V371" stroke-dasharray="2 10"/>
+    <circle cx="320" cy="210" r="133"/>
+    <circle cx="320" cy="210" r="155" stroke-dasharray="1 12"/>
+    <path d="M78 151V129H100M540 129H562V151M78 269V291H100M540 291H562V269"/>
+  </g>
+  <g fill="none" stroke="url(#tracezero-line)" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M199 210H254M386 210H437"/>
+    <path d="M232 205L237 210L232 215M414 205L419 210L414 215"/>
+    <path d="M198 225H226L251 250H388L415 225H437" opacity=".3"/>
+    <path d="M320 77A133 133 0 0 1 435 144M205 276A133 133 0 0 0 320 343" opacity=".6"/>
+    <path d="M263 210H281M305 210H335M359 210H377" opacity=".5"/>
+    <rect x="254" y="198" width="54" height="24" rx="12"/>
+    <rect x="292" y="198" width="56" height="24" rx="12"/>
+    <rect x="332" y="198" width="54" height="24" rx="12"/>
+  </g>
+  <g fill="#09080D" stroke="url(#tracezero-line)" stroke-width="1.3" stroke-linejoin="round">
+    <path d="M108 170L143 151H180L199 170V251L180 270H108Z"/>
+    <path d="M108 170H199M180 151V170M108 251H199"/>
+    <rect x="127" y="185" width="49" height="48" rx="3"/>
+    <rect x="437" y="153" width="98" height="114" rx="5"/>
+    <path d="M437 176H535M459 176V267"/>
+  </g>
+  <g fill="none" stroke="#D6D2DE" stroke-width="1" opacity=".7">
+    <path d="M137 197H165M137 205H159M137 213H163M137 221H151M471 192H520M471 202H510M471 223H520M471 233H513M471 243H519"/>
+    <path d="M447 193H451M447 211H451M447 229H451M447 247H451"/>
+    <path d="M282 166V182M320 152V168M358 166V182M282 238V254M320 252V268M358 238V254" opacity=".45"/>
+    <path d="M139 113H160M149 103V124M477 310H498M487 300V321" opacity=".4"/>
+  </g>
+  <g fill="#A28AF5">
+    <circle cx="281" cy="210" r="2.5"/><circle cx="320" cy="210" r="2.5"/><circle cx="359" cy="210" r="2.5"/>
+    <circle cx="449" cy="165" r="2"/><circle cx="460" cy="165" r="2" fill-opacity=".4"/>
+  </g>
+  <g fill="#B6AEC9" font-family="monospace" font-size="11" letter-spacing="1.2">
+    <text x="32" y="37">LOCAL EVIDENCE / TRAINING</text>
+    <text x="153" y="299" text-anchor="middle">EVIDENCE</text>
+    <text x="320" y="299" text-anchor="middle">CUSTODY</text>
+    <text x="486" y="299" text-anchor="middle">EXPLORER</text>
+    <text x="32" y="388">ILLUSTRATIVE WORKFLOW</text>
+  </g>
+</svg>

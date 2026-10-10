@@ -1,0 +1,10 @@
+/* Project identity additions; the SPECTRE layout and fallback rules are reused. */
+.case-revenant { --case-accent: #C6A6BC; }
+.case-shadowwatch { --case-accent: #E6C18A; }
+.case-tracezero { --case-accent: #CBD2E3; }
+.case-crypto { --case-accent: #9DD6BC; }
+.case-shadowwatch .case-hero h1 { font-size: clamp(2.75rem, 6vw, 6rem); }
+.case-crypto .case-hero h1 { font-size: clamp(2.5rem, 5.2vw, 5rem); line-height: 1.05; letter-spacing: -.045em; }
+.case-main .architecture-node[data-component-status="planned"] rect { stroke-dasharray: 8 5; }
+.case-main .architecture-node[data-component-status="planned"][data-state="selected"] rect { stroke-dasharray: none; }
+@media print { .case-main { --case-accent: #333; } }

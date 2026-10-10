@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="revenant-art-title revenant-art-desc">
+  <title id="revenant-art-title">REVENANT — proposed scoped assessment workflow</title>
+  <desc id="revenant-art-desc">Conceptual architecture only. A dashed authorization boundary encloses an abstract progression from scope through controlled assessment to evidence. Violet gates and a target illustrate proposed authorization and control. These are intentions, not implemented or verified capabilities.</desc>
+  <defs>
+    <linearGradient id="revenant-line" x1="115" y1="111" x2="525" y2="311" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B6AEC9"/><stop offset=".5" stop-color="#A28AF5"/><stop offset="1" stop-color="#55418A"/>
+    </linearGradient>
+    <radialGradient id="revenant-halo">
+      <stop stop-color="#A28AF5" stop-opacity=".09"/><stop offset="1" stop-color="#A28AF5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="333" cy="214" rx="235" ry="173" fill="url(#revenant-halo)"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1" opacity=".16">
+    <path d="M30 86H610M30 334H610M102 36V386M538 36V386"/>
+    <path d="M70 210H573M320 50V370" stroke-dasharray="2 10"/>
+    <path d="M81 124V102H103M537 102H559V124M81 296V318H103M537 318H559V296"/>
+  </g>
+  <rect x="110" y="118" width="420" height="184" rx="19" fill="#A28AF5" fill-opacity=".025" stroke="#A28AF5" stroke-width="1" stroke-dasharray="5 8" opacity=".75"/>
+  <g fill="none" stroke="url(#revenant-line)" stroke-width="1.3">
+    <path d="M76 210H166M218 210H291M349 210H421M473 210H568"/>
+    <path d="M151 205L156 210L151 215M267 205L272 210L267 215M397 205L402 210L397 215M550 205L555 210L550 215"/>
+    <path d="M254 172V188M254 232V248M385 172V188M385 232V248" opacity=".6"/>
+    <path d="M237 172H271M237 248H271M368 172H402M368 248H402" opacity=".4"/>
+  </g>
+  <g fill="#09080D" stroke="url(#revenant-line)" stroke-width="1.4" stroke-linejoin="round">
+    <path d="M192 178L218 188V210C218 226 205 238 192 244C179 238 166 226 166 210V188Z"/>
+    <path d="M320 177L349 194V226L320 243L291 226V194Z"/>
+    <rect x="421" y="181" width="52" height="58" rx="4"/>
+  </g>
+  <g fill="none" stroke="#A28AF5" stroke-width="1.1">
+    <path d="M181 210L189 218L204 201"/>
+    <circle cx="320" cy="210" r="15"/>
+    <circle cx="320" cy="210" r="5"/>
+    <path d="M320 188V196M320 224V232M298 210H306M334 210H342M431 196H462M431 204H457M431 212H461M431 220H450"/>
+    <path d="M176 138H208M320 138H352M432 138H464" opacity=".45"/>
+  </g>
+  <g fill="#B6AEC9" font-family="monospace" font-size="10" letter-spacing="1.2">
+    <text x="32" y="37">CONCEPT / ARCHITECTURE</text>
+    <text x="32" y="388">PROPOSED WORKFLOW</text>
+    <text x="192" y="273" text-anchor="middle">SCOPE</text>
+    <text x="320" y="273" text-anchor="middle">CONTROL</text>
+    <text x="447" y="273" text-anchor="middle">EVIDENCE</text>
+  </g>
+  <g fill="#A28AF5">
+    <circle cx="76" cy="210" r="3"/><circle cx="568" cy="210" r="3"/>
+    <circle cx="110" cy="153" r="2.5"/><circle cx="530" cy="267" r="2.5"/>
+  </g>
+</svg>

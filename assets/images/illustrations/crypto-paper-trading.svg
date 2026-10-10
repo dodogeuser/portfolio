@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="crypto-art-title crypto-art-desc">
+  <title id="crypto-art-title">Crypto Scalping Bot — paper-trading research</title>
+  <desc id="crypto-art-desc">An illustrative pipeline from abstract market candles through a strategy signal and simulated execution to a paper-trade ledger. Violet and muted mint traces describe strategy research, not a verified system topology. Candles are decorative samples, not measured market data, real-money orders or evidence of profitability.</desc>
+  <defs>
+    <linearGradient id="crypto-line" x1="103" y1="130" x2="541" y2="291" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9ACDBB"/><stop offset=".5" stop-color="#A28AF5"/><stop offset="1" stop-color="#9ACDBB"/>
+    </linearGradient>
+    <radialGradient id="crypto-halo">
+      <stop stop-color="#9ACDBB" stop-opacity=".055"/><stop offset="1" stop-color="#9ACDBB" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="324" cy="210" rx="242" ry="176" fill="url(#crypto-halo)"/>
+  <g fill="none" stroke="#A28AF5" stroke-width="1" opacity=".15">
+    <path d="M30 88H610M30 332H610M111 36V386M529 36V386"/>
+    <path d="M48 210H592M320 49V371" stroke-dasharray="2 10"/>
+    <ellipse cx="325" cy="210" rx="119" ry="130"/>
+    <ellipse cx="325" cy="210" rx="140" ry="152" stroke-dasharray="1 12"/>
+  </g>
+  <g fill="none" stroke="url(#crypto-line)" stroke-width="1.2" stroke-linejoin="round">
+    <path d="M192 210H246M302 210H352M408 210H463"/>
+    <path d="M222 205L227 210L222 215M327 205L332 210L327 215M437 205L442 210L437 215"/>
+    <path d="M168 254V282H486V270" opacity=".3"/>
+    <path d="M325 80A119 130 0 0 1 423 137M227 283A119 130 0 0 0 325 340" opacity=".55"/>
+  </g>
+  <g fill="#09080D" stroke="url(#crypto-line)" stroke-width="1.3" stroke-linejoin="round">
+    <path d="M93 155H177L192 170V254H93Z"/>
+    <path d="M177 155V170H192"/>
+    <path d="M274 178L302 194V226L274 242L246 226V194Z"/>
+    <path d="M380 180L408 210L380 240L352 210Z"/>
+    <rect x="463" y="150" width="84" height="120" rx="5"/>
+    <path d="M463 174H547M463 247H547"/>
+  </g>
+  <g fill="none" stroke="#B6AEC9" stroke-width="1" opacity=".65">
+    <path d="M103 180H181M103 204H181M103 228H181" opacity=".3"/>
+    <path d="M476 189H491M502 189H534M476 206H491M502 206H526M476 223H491M502 223H531M476 258H518"/>
+    <path d="M473 159H489M504 159H535" opacity=".5"/>
+    <path d="M258 141H290M364 141H396M268 269H280M374 269H386" opacity=".4"/>
+  </g>
+  <g stroke="#9ACDBB" stroke-width="1.3" stroke-linejoin="round">
+    <path d="M113 173V221M135 182V237M157 168V210M179 197V240" fill="none" opacity=".8"/>
+    <rect x="108" y="185" width="10" height="22" fill="#9ACDBB" fill-opacity=".12"/>
+    <rect x="130" y="196" width="10" height="24" fill="#09080D"/>
+    <rect x="152" y="179" width="10" height="20" fill="#9ACDBB" fill-opacity=".12"/>
+    <rect x="174" y="209" width="10" height="18" fill="#09080D"/>
+    <path d="M259 215H268L274 201L280 215H289M372 205L386 215M372 215L386 205" fill="none"/>
+  </g>
+  <g fill="#9ACDBB">
+    <circle cx="274" cy="201" r="2"/><circle cx="380" cy="210" r="2"/>
+    <circle cx="476" cy="235" r="2"/><circle cx="486" cy="235" r="2" fill-opacity=".4"/>
+  </g>
+  <g fill="#B6AEC9" font-family="monospace" font-size="11" letter-spacing="1">
+    <text x="32" y="37">STRATEGY RESEARCH / SIMULATION</text>
+    <text x="143" y="307" text-anchor="middle">CANDLES</text>
+    <text x="274" y="307" text-anchor="middle">SIGNAL</text>
+    <text x="380" y="307" text-anchor="middle">SIMULATED</text>
+    <text x="505" y="307" text-anchor="middle">LEDGER</text>
+    <text x="32" y="388">PAPER TRADING / ILLUSTRATIVE PIPELINE</text>
+  </g>
+</svg>

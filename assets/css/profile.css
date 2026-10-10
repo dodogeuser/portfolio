@@ -1,0 +1,49 @@
+/* Profile, digital resume, notes and contact: additive Carbon & Violet layouts. */
+.profile-hero { display:grid; grid-template-columns: 1.4fr 1fr; gap:var(--space-8); align-items:end; }
+.profile-aside { border-left:1px solid var(--border-strong); padding:var(--space-6); color:var(--text-secondary); }
+.profile-section { margin-block:var(--space-9); }
+.profile-section > h2 { font-size:var(--text-xl); margin-bottom:var(--space-6); }
+.profile-columns { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-6); }
+.profile-card { padding:var(--space-6); border:1px solid var(--border); border-radius:var(--radius-md); background:linear-gradient(135deg,var(--surface-subtle),var(--surface)); }
+.profile-card h3 { font-size:var(--text-lg); }
+.profile-card p, .profile-card li { color:var(--text-secondary); }
+.profile-meta { font-family:var(--font-mono); font-size:var(--text-sm); color:var(--accent); }
+.career-list { list-style:none; padding:0; border-left:1px solid var(--border-strong); }
+.career-list li { position:relative; padding:0 0 var(--space-7) var(--space-6); }
+.career-list li::before { content:""; position:absolute; left:-5px; top:.5rem; width:9px; height:9px; background:var(--accent); border-radius:50%; }
+.career-list h3 { margin-block:var(--space-2); }
+.record-list { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-5); list-style:none; padding:0; }
+.record-list li { border-top:1px solid var(--border); padding-block:var(--space-5); }
+.record-list strong,.record-list span { display:block; }
+.record-list span { color:var(--text-secondary); }
+.profile-notice { border-left:3px solid var(--accent); padding:var(--space-4) var(--space-5); color:var(--text-secondary); background:var(--surface-subtle); }
+.skills-matrix { margin-block:var(--space-7); }
+.skills-matrix details { border-top:1px solid var(--border-strong); padding-block:var(--space-3); }
+.skills-matrix summary { cursor:pointer; font-size:var(--text-lg); padding:var(--space-4); min-height:44px; }
+.skills-matrix summary:hover { color:var(--accent-hover); }
+.skills-matrix details[open] summary { color:var(--accent-hover); }
+.skills-detail { padding:var(--space-4); }
+.skills-detail p { max-width:var(--measure); }
+.skills-links { display:flex; flex-wrap:wrap; gap:var(--space-5); }
+.contact-paths { list-style:none; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:var(--space-5); }
+.contact-paths a { display:block; padding:var(--space-6); border:1px solid var(--border-strong); border-radius:var(--radius-md); overflow-wrap:anywhere; text-decoration:none; transition:background var(--motion-fast); }
+.contact-paths a:hover { background:var(--surface); }
+.contact-paths strong,.contact-paths span { display:block; }
+.contact-paths span { color:var(--text-secondary); margin-top:var(--space-2); }
+@media (max-width:48rem) { .profile-hero,.profile-columns,.record-list,.contact-paths { grid-template-columns:1fr; } .profile-hero { gap:var(--space-5); } .profile-section { margin-block:var(--space-8); } }
+@media (prefers-reduced-motion:reduce) { .contact-paths a { transition:none; } }
+@media (forced-colors:active) { .profile-card,.contact-paths a,.profile-notice { border:1px solid CanvasText; } }
+@media print {
+  :root { color-scheme:light; }
+  body, .profile-card,.profile-notice { background:white!important; color:black!important; }
+  .site-header,.site-menu,.site-footer,.breadcrumb,.skip-link,.resume-actions { display:none!important; }
+  main.container { width:100%; max-width:none; padding:0; }
+  .page-intro { padding-block:1rem; }
+  .page-intro h1 { font-size:28pt; }
+  .profile-section { margin-block:1.5rem; }
+  .profile-hero,.profile-columns,.record-list { display:block; }
+  .profile-card,.record-list li,.career-list li { break-inside:avoid; }
+  .profile-card p,.profile-card li,.profile-meta,.record-list span,.profile-notice { color:black!important; }
+  a { color:black!important; }
+  .profile-aside { padding:1rem; }
+}
