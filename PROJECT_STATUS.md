@@ -208,3 +208,13 @@ Implement Phase 11 restrained animations: scroll reveal, border pulse, active na
 ## Carbon & Violet release - 2026-10-10
 
 Owner authorized update of dodogeuser/portfolio. Published files prepared from the approved static source workspace; no private planning/tests/source PDFs copied. Current CV and original supplied logos are approved public assets. Previous CDN design/contact draft UI is superseded by owner-approved static architecture. Legacy page URLs redirect to current routes; all original files/history are retained. Publishing source remains main/root with .nojekyll. Production canonicals, social image URLs, sitemap and depth-independent 404 use https://dodogeuser.github.io/portfolio/. Source/adapter/local HTTP checks pass; live results will follow. Browser visual/AT/console/GPU/performance acceptance is not claimed.
+
+### Live release verification - 2026-10-10
+
+Release commit 398afbb9685bb7e0047858ec2ad639171849b5f8 pushed normally to main; GitHub Pages build reported built and its workflow completed successfully. Live URL: https://dodogeuser.github.io/portfolio/.
+
+Checked 71 published release files/compatibility pages over HTTPS: every response 200 and every body matched the committed checkout. Includes CV, supplied PNG logos, local Three.js/modules, CSS, favicon, social artwork, sitemap, robots and old page redirects. Two missing URLs (root and deep/nested) returned 404 with the exact custom 404 bytes and /portfolio/ asset paths. Parsed live h1 matches ENGINEERED TO BE SECURE. Public export excludes private workspace docs, tools and source PDFs; old repository historical files/history retained.
+
+Nine source suites passed; existing interaction adapters passed 287/305/338/386/142 assertions (1,458 total). Release path audit covered 16 current/compatibility HTML documents and 614 internal assets/fragments; no secret pattern found in active HTML/JS/CSS. Pre-commit whitespace check noted source-carried extra blank EOF lines; these do not affect delivery. No browser-native rendering, screen reader, console, WebGL/GPU, print or Lighthouse acceptance is claimed.
+
+No backend, database, package/build workflow, tracking or contact form. Pages settings unchanged: main/root, no custom domain. Original vendor pins retained. Official upstream advisory listing showed no published advisories; this is not a comprehensive security audit. Future update instructions are in README.
